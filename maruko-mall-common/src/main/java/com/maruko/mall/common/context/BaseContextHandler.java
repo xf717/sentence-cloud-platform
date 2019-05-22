@@ -1,7 +1,7 @@
-package com.github.wxiaoqi.security.common.context;
+package com.maruko.mall.common.context;
 
-import com.github.wxiaoqi.security.common.constant.CommonConstants;
-import com.github.wxiaoqi.security.common.util.StringHelper;
+import com.maruko.mall.common.constant.CommonConstants;
+import com.maruko.mall.common.util.StringHelper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;

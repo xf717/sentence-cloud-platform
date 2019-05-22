@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.common.service.impl;
+package com.maruko.mall.common.service.impl;
 
-import com.github.wxiaoqi.security.common.service.BaseService;
+import com.maruko.mall.common.service.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import tk.mybatis.mapper.common.Mapper;

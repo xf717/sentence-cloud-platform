@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth.client.exception;
+package com.maruko.mall.security.auth.client.exception;
 
 /**
  * Created by ace on 2017/9/15.

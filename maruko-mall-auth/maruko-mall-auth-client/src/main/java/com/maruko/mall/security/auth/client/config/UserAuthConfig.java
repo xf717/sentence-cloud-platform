@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth.client.config;
+package com.maruko.mall.security.auth.client.config;
 
 import org.springframework.beans.factory.annotation.Value;
 

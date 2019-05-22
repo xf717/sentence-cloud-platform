@@ -1,12 +1,12 @@
-package com.github.wxiaoqi.security.auth.service.impl;
+package com.maruko.mall.security.auth.service.impl;
 
-import com.github.wxiaoqi.security.api.vo.user.UserInfo;
-import com.github.wxiaoqi.security.auth.common.util.jwt.JWTInfo;
-import com.github.wxiaoqi.security.auth.feign.IUserService;
-import com.github.wxiaoqi.security.auth.service.AuthService;
-import com.github.wxiaoqi.security.auth.util.user.JwtAuthenticationRequest;
-import com.github.wxiaoqi.security.auth.util.user.JwtTokenUtil;
-import com.github.wxiaoqi.security.common.exception.auth.UserInvalidException;
+import com.maruko.mall.security.api.vo.user.UserInfo;
+import com.maruko.mall.security.auth.common.util.jwt.JWTInfo;
+import com.maruko.mall.security.auth.feign.IUserService;
+import com.maruko.mall.security.auth.service.AuthService;
+import com.maruko.mall.security.auth.util.user.JwtAuthenticationRequest;
+import com.maruko.mall.security.auth.util.user.JwtTokenUtil;
+import com.maruko.mall.security.common.exception.auth.UserInvalidException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;

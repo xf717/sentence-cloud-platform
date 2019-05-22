@@ -1,8 +1,8 @@
-package com.github.wxiaoqi.security.common.exception.auth;
+package com.maruko.mall.common.exception.auth;
 
 
-import com.github.wxiaoqi.security.common.constant.CommonConstants;
-import com.github.wxiaoqi.security.common.exception.BaseException;
+import com.maruko.mall.common.constant.CommonConstants;
+import com.maruko.mall.common.exception.BaseException;
 
 /**
  * Created by ace on 2017/9/10.

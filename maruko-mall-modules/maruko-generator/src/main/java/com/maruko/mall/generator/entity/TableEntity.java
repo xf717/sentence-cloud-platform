@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.generator.entity;
+package com.maruko.mall.generator.entity;
 
 import java.util.List;
 

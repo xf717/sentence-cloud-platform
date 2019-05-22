@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth.client.annotation;
+package com.maruko.mall.security.auth.client.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

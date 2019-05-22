@@ -1,7 +1,7 @@
-package com.github.wxiaoqi.security.auth.service;
+package com.maruko.mall.security.auth.service;
 
 
-import com.github.wxiaoqi.security.auth.util.user.JwtAuthenticationRequest;
+import com.maruko.mall.security.auth.util.user.JwtAuthenticationRequest;
 
 public interface AuthService {
     String login(JwtAuthenticationRequest authenticationRequest) throws Exception;

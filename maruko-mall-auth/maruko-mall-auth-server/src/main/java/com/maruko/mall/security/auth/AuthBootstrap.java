@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth;
+package com.maruko.mall.security.auth;
 
 
 import org.mybatis.spring.annotation.MapperScan;
@@ -14,7 +14,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-@MapperScan("com.github.wxiaoqi.security.auth.mapper")
+@MapperScan("com.maruko.mall.security.auth.mapper")
 @EnableAutoConfiguration
 public class AuthBootstrap {
     public static void main(String[] args) {

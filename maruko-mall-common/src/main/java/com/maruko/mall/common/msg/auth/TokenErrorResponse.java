@@ -1,7 +1,7 @@
-package com.github.wxiaoqi.security.common.msg.auth;
+package com.maruko.mall.common.msg.auth;
 
-import com.github.wxiaoqi.security.common.constant.RestCodeConstants;
-import com.github.wxiaoqi.security.common.msg.BaseResponse;
+import com.maruko.mall.common.constant.RestCodeConstants;
+import com.maruko.mall.common.msg.BaseResponse;
 
 /**
  * Created by ace on 2017/8/23.

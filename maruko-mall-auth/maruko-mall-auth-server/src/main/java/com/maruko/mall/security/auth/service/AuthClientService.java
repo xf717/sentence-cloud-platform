@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth.service;
+package com.maruko.mall.security.auth.service;
 
 
 import java.util.List;

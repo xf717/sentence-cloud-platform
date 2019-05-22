@@ -1,10 +1,10 @@
-package com.github.wxiaoqi.security.common.biz;
+package com.maruko.mall.common.biz;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.github.wxiaoqi.security.common.msg.TableResultResponse;
-import com.github.wxiaoqi.security.common.util.EntityUtils;
-import com.github.wxiaoqi.security.common.util.Query;
+import com.maruko.mall.common.msg.TableResultResponse;
+import com.maruko.mall.common.util.EntityUtils;
+import com.maruko.mall.common.util.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.entity.Example;

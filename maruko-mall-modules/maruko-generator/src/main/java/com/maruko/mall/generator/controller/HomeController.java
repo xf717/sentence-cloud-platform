@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.generator.controller;
+package com.maruko.mall.generator.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

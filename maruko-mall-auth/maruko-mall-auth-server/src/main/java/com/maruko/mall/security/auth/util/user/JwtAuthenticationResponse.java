@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth.util.user;
+package com.maruko.mall.security.auth.util.user;
 
 import java.io.Serializable;
 

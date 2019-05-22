@@ -1,0 +1,74 @@
+package ${package}.service;
+
+import ${package}.client.dto.${className}DTO;
+import com.ktpfx.common.msg.BaseResponse;
+import com.ktpfx.common.msg.ListRestResponse;
+import com.ktpfx.common.msg.ObjectRestResponse;
+import com.ktpfx.common.msg.TableResultResponse;
+import com.ktpfx.common.page.Page;
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+public interface I${className}Service {
+
+	/**
+	 * 添加数据
+	 * @param ${classname}DTO
+	 * @return
+	 */
+	BaseResponse add(${className}DTO ${classname}DTO);
+
+	/**
+	 * 添加数据,并返回添加成功后的实体数据，可以获取到主键ID
+	 * @param ${classname}DTO
+	 * @return
+	 */
+	ObjectRestResponse<${className}DTO> add${className}(${className}DTO ${classname}DTO);
+
+	/**
+	 * 更新数据
+	 * @param ${classname}DTO
+	 * @return
+	 */
+	BaseResponse update(${className}DTO ${classname}DTO);
+
+	/**
+	 * 根据ID删除数据
+	 * @param id
+	 * @return
+	 */
+	BaseResponse remove(Integer id);
+
+	/**
+	 * 查找数据显示分页
+	 * @param page
+	 * @return
+	 */
+	TableResultResponse<${className}DTO> page(${className}DTO ${classname}DTO, Page<${className}DTO> page);
+
+	/**
+	 * 根据条件查找数据
+	 * @param ${classname}DTO
+	 * @return
+	 */
+	ListRestResponse<${className}DTO> query(${className}DTO ${classname}DTO);
+
+	/**
+	 * 根据Id查找
+	 * @param id
+	 * @return
+	 */
+	ObjectRestResponse<${className}DTO> findById(Integer id);
+
+
+	/**
+	 * 根据条件查找数据
+	 * @param ${classname}DTO
+	 * @return
+	 */
+	ObjectRestResponse<${className}DTO> findByCondition(${className}DTO ${classname}DTO);
+}

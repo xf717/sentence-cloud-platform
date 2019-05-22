@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.generator.utils;
+package com.maruko.mall.generator.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

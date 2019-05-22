@@ -1,7 +1,7 @@
-package com.github.wxiaoqi.security.generator.rest;
+package com.maruko.mall.generator.rest;
 
-import com.github.wxiaoqi.security.common.msg.TableResultResponse;
-import com.github.wxiaoqi.security.generator.service.GeneratorService;
+import com.maruko.mall.common.msg.TableResultResponse;
+import com.maruko.mall.generator.service.GeneratorService;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

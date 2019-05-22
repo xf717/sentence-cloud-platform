@@ -1,8 +1,8 @@
-package com.github.wxiaoqi.security.auth.configuration;
+package com.maruko.mall.security.auth.configuration;
 
-import com.github.wxiaoqi.security.auth.interceptor.ServiceAuthRestInterceptor;
-import com.github.wxiaoqi.security.auth.interceptor.UserAuthRestInterceptor;
-import com.github.wxiaoqi.security.common.handler.GlobalExceptionHandler;
+import com.maruko.mall.security.auth.interceptor.ServiceAuthRestInterceptor;
+import com.maruko.mall.security.auth.interceptor.UserAuthRestInterceptor;
+import com.maruko.mall.security.common.handler.GlobalExceptionHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

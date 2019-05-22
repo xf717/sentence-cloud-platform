@@ -1,8 +1,8 @@
-package com.github.wxiaoqi.security.auth.feign;
+package com.maruko.mall.security.auth.feign;
 
-import com.github.wxiaoqi.security.api.vo.user.UserInfo;
-import com.github.wxiaoqi.security.auth.configuration.FeignConfiguration;
-import com.github.wxiaoqi.security.auth.util.user.JwtAuthenticationRequest;
+import com.maruko.mall.security.api.vo.user.UserInfo;
+import com.maruko.mall.security.auth.configuration.FeignConfiguration;
+import com.maruko.mall.security.auth.util.user.JwtAuthenticationRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

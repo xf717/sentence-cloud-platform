@@ -1,22 +1,22 @@
 
-package com.github.wxiaoqi.security.auth.client.jwt;
+package com.maruko.mall.security.auth.client.jwt;
 
-import com.github.wxiaoqi.security.auth.client.config.ServiceAuthConfig;
-import com.github.wxiaoqi.security.auth.client.feign.ServiceAuthFeign;
-import com.github.wxiaoqi.security.auth.common.util.jwt.IJWTInfo;
-import com.github.wxiaoqi.security.auth.common.util.jwt.JWTHelper;
-import com.github.wxiaoqi.security.common.exception.auth.ClientTokenException;
-import com.github.wxiaoqi.security.common.msg.BaseResponse;
-import com.github.wxiaoqi.security.common.msg.ObjectRestResponse;
+import com.maruko.mall.common.exception.auth.ClientTokenException;
+import com.maruko.mall.common.msg.BaseResponse;
+import com.maruko.mall.common.msg.ObjectRestResponse;
+import com.maruko.mall.security.auth.client.config.ServiceAuthConfig;
+import com.maruko.mall.security.auth.client.feign.ServiceAuthFeign;
+
+import com.maruko.mall.security.auth.common.util.jwt.IJWTInfo;
+import com.maruko.mall.security.auth.common.util.jwt.JWTHelper;
 import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.SignatureException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
+import java.security.SignatureException;
 import java.util.List;
 
 /**

@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth.client.exception;
+package com.maruko.mall.security.auth.client.exception;
 
 /**
  *

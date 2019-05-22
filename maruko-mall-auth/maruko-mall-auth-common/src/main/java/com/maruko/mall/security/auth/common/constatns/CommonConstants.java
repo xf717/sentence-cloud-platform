@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth.common.constatns;
+package com.maruko.mall.security.auth.common.constatns;
 
 /**
  * Created by ace on 2017/8/29.

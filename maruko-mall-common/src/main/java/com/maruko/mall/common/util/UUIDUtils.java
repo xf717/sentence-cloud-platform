@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.common.util;
+package com.maruko.mall.common.util;
 
 import java.util.UUID;
 
@@ -25,4 +25,9 @@ public class UUIDUtils {
         return shortBuffer.toString();
 
     }
+
+	public static void main(String[] args) {
+		String uuid = UUIDUtils.generateShortUuid();
+		System.out.println(uuid);
+	}
 }

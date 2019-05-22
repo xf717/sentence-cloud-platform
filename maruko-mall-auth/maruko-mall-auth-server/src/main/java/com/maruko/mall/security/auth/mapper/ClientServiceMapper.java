@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.auth.mapper;
+package com.maruko.mall.security.auth.mapper;
 
-import com.github.wxiaoqi.security.auth.entity.ClientService;
+import com.maruko.mall.security.auth.entity.ClientService;
 import tk.mybatis.mapper.common.Mapper;
 
 public interface ClientServiceMapper extends Mapper<ClientService> {

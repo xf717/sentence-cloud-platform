@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.common.vo;
+package com.maruko.mall.common.vo;
 
 import java.util.ArrayList;
 import java.util.List;

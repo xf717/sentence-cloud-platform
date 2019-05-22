@@ -1,8 +1,8 @@
-package com.github.wxiaoqi.security.auth.controller;
+package com.maruko.mall.security.auth.controller;
 
-import com.github.wxiaoqi.security.auth.service.AuthService;
-import com.github.wxiaoqi.security.auth.util.user.JwtAuthenticationRequest;
-import com.github.wxiaoqi.security.common.msg.ObjectRestResponse;
+import com.maruko.mall.security.auth.service.AuthService;
+import com.maruko.mall.security.auth.util.user.JwtAuthenticationRequest;
+import com.maruko.mall.security.common.msg.ObjectRestResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

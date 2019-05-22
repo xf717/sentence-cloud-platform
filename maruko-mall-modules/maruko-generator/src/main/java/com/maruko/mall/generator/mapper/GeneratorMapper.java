@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.generator.mapper;
+package com.maruko.mall.generator.mapper;
 
 import java.util.List;
 import java.util.Map;

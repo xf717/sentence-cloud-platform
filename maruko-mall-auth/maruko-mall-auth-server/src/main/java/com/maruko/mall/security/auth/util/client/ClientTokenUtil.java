@@ -1,8 +1,8 @@
-package com.github.wxiaoqi.security.auth.util.client;
+package com.maruko.mall.security.auth.util.client;
 
-import com.github.wxiaoqi.security.auth.common.util.jwt.IJWTInfo;
-import com.github.wxiaoqi.security.auth.common.util.jwt.JWTHelper;
-import com.github.wxiaoqi.security.auth.configuration.KeyConfiguration;
+import com.maruko.mall.security.auth.common.util.jwt.IJWTInfo;
+import com.maruko.mall.security.auth.common.util.jwt.JWTHelper;
+import com.maruko.mall.security.auth.configuration.KeyConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

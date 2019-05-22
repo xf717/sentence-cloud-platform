@@ -50,7 +50,7 @@ spring:
       transport:
         dashboard: localhost:8080
 mybatis:
-  basepackage: com.github.wxiaoqi.security.auth.mapper
+  basepackage: com.maruko.mall.security.auth.mapper
   xmlLocation: classpath:mapper/**/*.xml
   mapper-locations: "classpath*:mapper/*.xml"
 
@@ -100,7 +100,7 @@ client:
 logging:
   level:
 #        tk.mybatis: DEBUG
-    com.github.wxiaoqi.security.auth: DEBUG
+    com.maruko.mall.security.auth: DEBUG
 
 management:
   endpoints:

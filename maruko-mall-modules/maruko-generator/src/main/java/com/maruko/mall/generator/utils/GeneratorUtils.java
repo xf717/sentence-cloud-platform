@@ -1,7 +1,5 @@
-package com.github.wxiaoqi.security.generator.utils;
+package com.maruko.mall.generator.utils;
 
-import com.github.wxiaoqi.security.generator.entity.ColumnEntity;
-import com.github.wxiaoqi.security.generator.entity.TableEntity;
 import org.apache.commons.configuration.Configuration;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
@@ -32,11 +30,20 @@ public class GeneratorUtils {
         List<String> templates = new ArrayList<String>();
         templates.add("template/index.js.vm");
         templates.add("template/index.vue.vm");
-        templates.add("template/mapper.xml.vm");
-        templates.add("template/biz.java.vm");
-        templates.add("template/entity.java.vm");
-        templates.add("template/mapper.java.vm");
-        templates.add("template/controller.java.vm");
+//        templates.add("template/mapper.xml.vm");
+		templates.add("template/newMapper.xml.vm");
+//        templates.add("template/biz.java.vm");
+//        templates.add("template/entity.java.vm");
+		templates.add("template/newEntity.java.vm");
+//        templates.add("template/mapper.java.vm");
+		templates.add("template/newMapper.java.vm");
+//        templates.add("template/controller.java.vm");
+		templates.add("template/newController.java.vm");
+		templates.add("template/service.java.vm");
+		templates.add("template/serviceImpl.java.vm");
+		templates.add("template/dto.java.vm");
+		templates.add("template/facade.java.vm");
+		templates.add("template/feignClientFacade.java.vm");
         return templates;
     }
 
@@ -49,7 +56,7 @@ public class GeneratorUtils {
         Configuration config = getConfig();
 
         //表信息
-        TableEntity tableEntity = new TableEntity();
+        com.maruko.mall.generator.entity.TableEntity tableEntity = new com.maruko.mall.generator.entity.TableEntity();
         tableEntity.setTableName(table.get("tableName"));
         tableEntity.setComments(table.get("tableComment"));
         //表名转换成Java类名
@@ -58,9 +65,9 @@ public class GeneratorUtils {
         tableEntity.setClassname(StringUtils.uncapitalize(className));
 
         //列信息
-        List<ColumnEntity> columsList = new ArrayList<>();
+        List<com.maruko.mall.generator.entity.ColumnEntity> columsList = new ArrayList<>();
         for (Map<String, String> column : columns) {
-            ColumnEntity columnEntity = new ColumnEntity();
+            com.maruko.mall.generator.entity.ColumnEntity columnEntity = new com.maruko.mall.generator.entity.ColumnEntity();
             columnEntity.setColumnName(column.get("columnName"));
             columnEntity.setDataType(column.get("dataType"));
             columnEntity.setComments(column.get("columnComment"));
@@ -106,9 +113,11 @@ public class GeneratorUtils {
         map.put("package", config.getString("package"));
         map.put("author", config.getString("author"));
         map.put("email", config.getString("email"));
-        map.put("datetime", DateUtils.format(new Date(), DateUtils.DATE_TIME_PATTERN));
+        map.put("datetime", DateUtils.format(new Date(), com.maruko.mall.generator.utils.DateUtils.DATE_TIME_PATTERN));
         map.put("moduleName", config.getString("mainModule"));
         map.put("secondModuleName", toLowerCaseFirstOne(className));
+		map.put("serverName",config.getString("serverName"));
+
         VelocityContext context = new VelocityContext(map);
 
         //获取模板列表
@@ -178,21 +187,58 @@ public class GeneratorUtils {
             return frontPath + "views" + File.separator + moduleName + File.separator + toLowerCaseFirstOne(className) + File.separator + "index.vue";
         }
 
-        if (template.contains("biz.java.vm")) {
-            return packagePath + "biz" + File.separator + className + "Biz.java";
-        }
-        if (template.contains("mapper.java.vm")) {
-            return packagePath + "mapper" + File.separator + className + "Mapper.java";
-        }
-        if (template.contains("entity.java.vm")) {
-            return packagePath + "entity" + File.separator + className + ".java";
-        }
-        if (template.contains("controller.java.vm")) {
-            return packagePath + "rest" + File.separator + className + "Controller.java";
-        }
-        if (template.contains("mapper.xml.vm")) {
-            return "main" + File.separator + "resources" + File.separator + "mapper" + File.separator + className + "Mapper.xml";
-        }
+//        if (template.contains("biz.java.vm")) {
+//            return packagePath + "biz" + File.separator + className + "Biz.java";
+//        }
+//        if (template.contains("mapper.java.vm")) {
+//            return packagePath + "mapper" + File.separator + className + "Mapper.java";
+//        }
+
+		if (template.contains("newMapper.java.vm")) {
+			return packagePath + "mapper" + File.separator + "I" +className + "Mapper.java";
+		}
+
+//        if (template.contains("entity.java.vm")) {
+//            return packagePath + "entity" + File.separator + className + ".java";
+//        }
+
+		if (template.contains("newEntity.java.vm")) {
+			return packagePath + "entity" + File.separator + className + "DO" +  ".java";
+		}
+
+//        if (template.contains("controller.java.vm")) {
+//            return packagePath + "rest" + File.separator + className + "Controller.java";
+//        }
+		if (template.contains("newController.java.vm")) {
+			return packagePath + "rest" + File.separator + className + "Controller.java";
+		}
+//        if (template.contains("mapper.xml.vm")) {
+//            return "main" + File.separator + "resources" + File.separator + "mapper" + File.separator + className + "Mapper.xml";
+//        }
+
+		if (template.contains("newMapper.xml.vm")) {
+			return "main" + File.separator + "resources" + File.separator + "mapper" + File.separator + className + "Mapper.xml";
+		}
+
+        if (template.contains("service.java.vm")) {
+			return packagePath + "service" + File.separator + "I" + className + "Service.java";
+		}
+
+		if (template.contains("serviceImpl.java.vm")) {
+			return packagePath + "service" + File.separator + "impl" +File.separator + className + "ServiceImpl.java";
+		}
+
+		if (template.contains("dto.java.vm")) {
+			return packagePath + "client" +File.separator + "dto" + File.separator + className + "DTO.java";
+		}
+
+		if (template.contains("facade.java.vm")) {
+			return packagePath + "client" +File.separator + "facade" + File.separator  + "api"  + File.separator + "I"+ className + "Facade.java";
+		}
+
+		if (template.contains("feignClientFacade.java.vm")) {
+			return packagePath + "client" +File.separator + "facade"   + File.separator + "I"+ className + "FeignClientFacade.java";
+		}
 
         return null;
     }

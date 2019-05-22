@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.common.util;
+package com.maruko.mall.common.util;
 
-import com.github.wxiaoqi.security.common.vo.TreeNode;
+import com.maruko.mall.common.vo.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

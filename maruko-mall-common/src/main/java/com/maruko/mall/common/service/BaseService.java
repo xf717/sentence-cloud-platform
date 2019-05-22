@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.common.service;
+package com.maruko.mall.common.service;
 
 import java.util.List;
 

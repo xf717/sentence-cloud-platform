@@ -1,7 +1,7 @@
-package com.github.wxiaoqi.security.generator.service;
+package com.maruko.mall.generator.service;
 
-import com.github.wxiaoqi.security.generator.mapper.GeneratorMapper;
-import com.github.wxiaoqi.security.generator.utils.GeneratorUtils;
+import com.maruko.mall.generator.mapper.GeneratorMapper;
+import com.maruko.mall.generator.utils.GeneratorUtils;
 import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

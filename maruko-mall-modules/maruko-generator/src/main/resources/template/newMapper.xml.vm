@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="${package}.mapper.I${className}Mapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="${package}.client.dto.${className}DTO" id="${classname}Map">
+        #foreach($column in $columns)
+            <result property="${column.attrname}" column="${column.columnName}"/>
+        #end
+    </resultMap>
+
+    <select id="query" resultMap="${classname}Map" parameterType="${package}.client.dto.${className}DTO">
+        select
+        <trim suffixOverrides=",">
+            #foreach($column in $columns)
+                ${column.columnName},
+            #end
+        </trim>
+        from ${tableName}
+        <where>
+            1 = 1
+            #foreach($column in $columns)
+                <if test="${column.attrname} != null">
+                    AND ${column.columnName} = #{${column.attrname}}
+                </if>
+            #end
+        </where>
+    </select>
+
+    <insert id="insertSelective${className}" parameterType="${package}.client.dto.${className}DTO"
+            useGeneratedKeys="true" keyColumn="${pk.columnName}" keyProperty="${pk.attrname}">
+        insert into ${tableName}
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            #foreach($column in $columns)
+                <if test="${column.attrname} != null">
+                    ${column.columnName},
+                </if>
+            #end
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            #foreach($column in $columns)
+                <if test="${column.attrname} != null">
+                    #{${column.attrname}},
+                </if>
+            #end
+        </trim>
+    </insert>
+
+</mapper>

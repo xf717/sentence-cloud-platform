@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth.configuration;
+package com.maruko.mall.security.auth.configuration;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

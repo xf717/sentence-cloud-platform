@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.common.util;
+package com.maruko.mall.common.util;
 
 import javax.servlet.http.HttpServletRequest;
 

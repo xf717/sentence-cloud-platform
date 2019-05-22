@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.auth.client.config;
+package com.maruko.mall.security.auth.client.config;
 
-import com.github.wxiaoqi.security.auth.client.interceptor.OkHttpTokenInterceptor;
+import com.maruko.mall.security.auth.client.interceptor.OkHttpTokenInterceptor;
 import feign.Feign;
 import okhttp3.ConnectionPool;
 import org.springframework.beans.factory.annotation.Autowired;

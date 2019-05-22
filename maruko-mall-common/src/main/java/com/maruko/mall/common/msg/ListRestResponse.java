@@ -1,60 +1,66 @@
-package com.github.wxiaoqi.security.common.msg;
+package com.maruko.mall.common.msg;
+
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
+import java.util.List;
 
 /**
  * ${DESCRIPTION}
  *
- * @author wanghaobin
+ * @author xiaofeng
  * @create 2017-06-09 7:32
  */
-public class ListRestResponse<T> {
-    String msg;
-    T result;
-    int count;
+public class ListRestResponse<T> extends BaseResponse {
+	List<T> result;
+	int count;
 
+	public ListRestResponse() {
+		super();
+	}
 
+	public ListRestResponse(int status, String message) {
+		super(status, message);
+	}
 
-    public String getMsg() {
-        return msg;
-    }
+	public static ListRestResponse failure(int status, String message) {
+		return new ListRestResponse(status, message);
+	}
 
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
+	public List<T> getResult() {
+		return this.result;
+	}
 
-    public T getResult() {
-        return result;
-    }
+	public void setResult(List<T> result) {
+		this.result = result;
+	}
 
-    public void setResult(T result) {
-        this.result = result;
-    }
+	public int getCount() {
+		return this.count;
+	}
 
-    public int getCount() {
-        return count;
-    }
+	public void setCount(int count) {
+		this.count = count;
+	}
 
-    public void setCount(int count) {
-        this.count = count;
-    }
+	public ListRestResponse count(int count) {
+		this.setCount(count);
+		return this;
+	}
 
-    public ListRestResponse count(int count) {
-        this.setCount(count);
-        return this;
-    }
+	public ListRestResponse count(Long count) {
+		this.setCount(count.intValue());
+		return this;
+	}
 
-    public ListRestResponse count(Long count) {
-        this.setCount(count.intValue());
-        return this;
-    }
+	public ListRestResponse result(List<T> result) {
+		this.setResult(result);
+		return this;
+	}
 
-    public ListRestResponse msg(String msg) {
-        this.setMsg(msg);
-        return this;
-    }
-
-    public ListRestResponse result(T result) {
-        this.setResult(result);
-        return this;
-    }
+	@Override
+	public String toString() {
+		return new ToStringBuilder(this).append("super", super.toString()).append("result", result)
+				.append("count", count).toString();
+	}
 
 }

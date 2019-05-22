@@ -1,9 +1,9 @@
-package com.github.wxiaoqi.security.auth.interceptor;
+package com.maruko.mall.security.auth.interceptor;
 
-import com.github.wxiaoqi.security.auth.common.util.jwt.IJWTInfo;
-import com.github.wxiaoqi.security.auth.configuration.UserConfiguration;
-import com.github.wxiaoqi.security.auth.util.user.JwtTokenUtil;
-import com.github.wxiaoqi.security.common.context.BaseContextHandler;
+import com.maruko.mall.security.auth.common.util.jwt.IJWTInfo;
+import com.maruko.mall.security.auth.configuration.UserConfiguration;
+import com.maruko.mall.security.auth.util.user.JwtTokenUtil;
+import com.maruko.mall.security.common.context.BaseContextHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

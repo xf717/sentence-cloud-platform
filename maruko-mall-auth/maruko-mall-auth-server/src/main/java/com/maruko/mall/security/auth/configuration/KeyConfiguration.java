@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth.configuration;
+package com.maruko.mall.security.auth.configuration;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

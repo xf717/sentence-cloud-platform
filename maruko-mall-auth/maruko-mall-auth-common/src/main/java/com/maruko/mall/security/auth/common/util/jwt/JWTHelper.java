@@ -1,7 +1,7 @@
-package com.github.wxiaoqi.security.auth.common.util.jwt;
+package com.maruko.mall.security.auth.common.util.jwt;
 
-import com.github.wxiaoqi.security.auth.common.constatns.CommonConstants;
-import com.github.wxiaoqi.security.auth.common.util.StringHelper;
+import com.maruko.mall.security.auth.common.constatns.CommonConstants;
+import com.maruko.mall.security.auth.common.util.StringHelper;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;

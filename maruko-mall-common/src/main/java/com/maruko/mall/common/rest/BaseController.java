@@ -1,10 +1,10 @@
-package com.github.wxiaoqi.security.common.rest;
+package com.maruko.mall.common.rest;
 
-import com.github.wxiaoqi.security.common.biz.BaseBiz;
-import com.github.wxiaoqi.security.common.context.BaseContextHandler;
-import com.github.wxiaoqi.security.common.msg.ObjectRestResponse;
-import com.github.wxiaoqi.security.common.msg.TableResultResponse;
-import com.github.wxiaoqi.security.common.util.Query;
+import com.maruko.mall.common.biz.BaseBiz;
+import com.maruko.mall.common.context.BaseContextHandler;
+import com.maruko.mall.common.msg.ObjectRestResponse;
+import com.maruko.mall.common.msg.TableResultResponse;
+import com.maruko.mall.common.util.Query;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * ${DESCRIPTION}
  *
- * @author wanghaobin
+ * @author xiaofeng
  * @create 2017-06-15 8:48
  */
 @Slf4j

@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.common.exception;
+package com.maruko.mall.common.exception;
 
 /**
  * Created by ace on 2017/9/8.

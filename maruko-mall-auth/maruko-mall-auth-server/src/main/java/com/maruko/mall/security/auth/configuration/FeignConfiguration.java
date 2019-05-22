@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.auth.configuration;
+package com.maruko.mall.security.auth.configuration;
 
-import com.github.wxiaoqi.security.auth.interceptor.ClientTokenInterceptor;
+import com.maruko.mall.security.auth.interceptor.ClientTokenInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

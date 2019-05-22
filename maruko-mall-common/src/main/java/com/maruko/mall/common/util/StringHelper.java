@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.common.util;
+package com.maruko.mall.common.util;
 
 /**
  * Created by ace on 2017/9/10.

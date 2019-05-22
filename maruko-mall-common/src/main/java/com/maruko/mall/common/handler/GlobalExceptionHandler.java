@@ -1,11 +1,11 @@
-package com.github.wxiaoqi.security.common.handler;
+package com.maruko.mall.common.handler;
 
-import com.github.wxiaoqi.security.common.constant.CommonConstants;
-import com.github.wxiaoqi.security.common.exception.BaseException;
-import com.github.wxiaoqi.security.common.exception.auth.ClientTokenException;
-import com.github.wxiaoqi.security.common.exception.auth.UserInvalidException;
-import com.github.wxiaoqi.security.common.exception.auth.UserTokenException;
-import com.github.wxiaoqi.security.common.msg.BaseResponse;
+import com.maruko.mall.common.constant.CommonConstants;
+import com.maruko.mall.common.exception.BaseException;
+import com.maruko.mall.common.exception.auth.ClientTokenException;
+import com.maruko.mall.common.exception.auth.UserInvalidException;
+import com.maruko.mall.common.exception.auth.UserTokenException;
+import com.maruko.mall.common.msg.BaseResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Created by ace on 2017/9/8.
  */
-@ControllerAdvice("com.github.wxiaoqi.security")
+@ControllerAdvice("com.maruko.mall")
 @ResponseBody
 public class GlobalExceptionHandler {
     private Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);

@@ -1,8 +1,8 @@
-package com.github.wxiaoqi.security.auth.util.user;
+package com.maruko.mall.security.auth.util.user;
 
-import com.github.wxiaoqi.security.auth.common.util.jwt.IJWTInfo;
-import com.github.wxiaoqi.security.auth.common.util.jwt.JWTHelper;
-import com.github.wxiaoqi.security.auth.configuration.KeyConfiguration;
+import com.maruko.mall.security.auth.common.util.jwt.IJWTInfo;
+import com.maruko.mall.security.auth.common.util.jwt.JWTHelper;
+import com.maruko.mall.security.auth.configuration.KeyConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;

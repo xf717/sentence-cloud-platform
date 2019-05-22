@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.common.constant;
+package com.maruko.mall.common.constant;
 
 /**
  * Created by ace on 2017/8/29.

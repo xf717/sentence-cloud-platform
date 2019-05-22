@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.auth.mapper;
+package com.maruko.mall.security.auth.mapper;
 
-import com.github.wxiaoqi.security.auth.entity.Client;
+import com.maruko.mall.security.auth.entity.Client;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;

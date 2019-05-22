@@ -1,7 +1,7 @@
-package com.github.wxiaoqi.security.auth.runner;
+package com.maruko.mall.security.auth.runner;
 
-import com.github.wxiaoqi.security.auth.common.util.jwt.RsaKeyHelper;
-import com.github.wxiaoqi.security.auth.configuration.KeyConfiguration;
+import com.maruko.mall.security.auth.common.util.jwt.RsaKeyHelper;
+import com.maruko.mall.security.auth.configuration.KeyConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;

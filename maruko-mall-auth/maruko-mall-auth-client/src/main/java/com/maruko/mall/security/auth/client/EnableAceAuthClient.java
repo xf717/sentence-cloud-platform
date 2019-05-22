@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.auth.client;
+package com.maruko.mall.security.auth.client;
 
-import com.github.wxiaoqi.security.auth.client.configuration.AutoConfiguration;
+import com.maruko.mall.security.auth.client.configuration.AutoConfiguration;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 

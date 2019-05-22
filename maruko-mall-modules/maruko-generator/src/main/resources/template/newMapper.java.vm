@@ -1,0 +1,31 @@
+package ${package}.mapper;
+
+import ${package}.client.dto.${className}DTO;
+import ${package}.entity.${className}DO;
+import tk.mybatis.mapper.common.Mapper;
+
+import java.util.List;
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+public interface I${className}Mapper extends Mapper<${className}DO> {
+
+	/**
+	 * 查找数据
+	 * @param dto
+	 * @return
+	 */
+	List<${className}DTO> query(${className}DTO dto);
+
+	/**
+	 * 插入数据，并返回主键ID
+	 * @param dto
+	 * @return
+	 */
+	int insertSelective${className}(${className}DTO dto);
+
+}

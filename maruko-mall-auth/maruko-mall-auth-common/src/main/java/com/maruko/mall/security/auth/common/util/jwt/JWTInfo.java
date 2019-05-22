@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth.common.util.jwt;
+package com.maruko.mall.security.auth.common.util.jwt;
 
 import java.io.Serializable;
 

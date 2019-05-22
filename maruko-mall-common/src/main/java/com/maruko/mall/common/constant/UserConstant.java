@@ -1,9 +1,9 @@
-package com.github.wxiaoqi.security.common.constant;
+package com.maruko.mall.common.constant;
 
 /**
  * ${DESCRIPTION}
  *
- * @author wanghaobin
+ * @author xiaofeng
  * @create 2017-06-14 8:36
  */
 public class UserConstant {

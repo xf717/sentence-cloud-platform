@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.auth.entity;
+package com.maruko.mall.security.auth.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Id;

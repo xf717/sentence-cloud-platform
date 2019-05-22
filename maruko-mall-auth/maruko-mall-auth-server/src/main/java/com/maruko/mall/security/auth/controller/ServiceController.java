@@ -1,10 +1,10 @@
-package com.github.wxiaoqi.security.auth.controller;
+package com.maruko.mall.security.auth.controller;
 
-import com.github.wxiaoqi.security.auth.biz.ClientBiz;
-import com.github.wxiaoqi.security.auth.entity.Client;
-import com.github.wxiaoqi.security.auth.entity.ClientService;
-import com.github.wxiaoqi.security.common.msg.ObjectRestResponse;
-import com.github.wxiaoqi.security.common.rest.BaseController;
+import com.maruko.mall.security.auth.biz.ClientBiz;
+import com.maruko.mall.security.auth.entity.Client;
+import com.maruko.mall.security.auth.entity.ClientService;
+import com.maruko.mall.security.common.msg.ObjectRestResponse;
+import com.maruko.mall.security.common.rest.BaseController;
 import org.springframework.web.bind.annotation.*;
 
 /**

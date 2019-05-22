@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.common.web;
+package com.maruko.mall.common.web;
 
 
 import org.apache.commons.io.IOUtils;
@@ -15,7 +15,7 @@ import java.util.Vector;
 /**
  * ${DESCRIPTION}
  *
- * @author wanghaobin
+ * @author xiaofeng
  * @create 2017-07-01 17:04
  */
 public class ParameterRequestWrapper extends HttpServletRequestWrapper {

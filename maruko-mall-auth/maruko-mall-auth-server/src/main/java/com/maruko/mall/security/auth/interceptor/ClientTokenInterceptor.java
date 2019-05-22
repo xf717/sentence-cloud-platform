@@ -1,7 +1,7 @@
-package com.github.wxiaoqi.security.auth.interceptor;
+package com.maruko.mall.security.auth.interceptor;
 
-import com.github.wxiaoqi.security.auth.configuration.ClientConfiguration;
-import com.github.wxiaoqi.security.auth.service.AuthClientService;
+import com.maruko.mall.security.auth.configuration.ClientConfiguration;
+import com.maruko.mall.security.auth.service.AuthClientService;
 import feign.RequestInterceptor;
 import feign.RequestTemplate;
 import org.slf4j.Logger;
