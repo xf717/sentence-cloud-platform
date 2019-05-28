@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.api.vo.authority;
+package com.maruko.mall.security.api.vo.authority;
 
 import java.io.Serializable;
 

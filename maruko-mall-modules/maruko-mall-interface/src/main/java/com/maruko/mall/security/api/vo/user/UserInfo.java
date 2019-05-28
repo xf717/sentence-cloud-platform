@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.api.vo.user;
+package com.maruko.mall.security.api.vo.user;
 
 import java.io.Serializable;
 import java.util.Date;

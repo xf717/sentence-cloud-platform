@@ -1,10 +1,10 @@
 package com.maruko.mall.security.auth.client.interceptor;
 
+import com.maruko.mall.common.context.BaseContextHandler;
 import com.maruko.mall.security.auth.client.annotation.IgnoreUserToken;
 import com.maruko.mall.security.auth.client.config.UserAuthConfig;
 import com.maruko.mall.security.auth.client.jwt.UserAuthUtil;
 import com.maruko.mall.security.auth.common.util.jwt.IJWTInfo;
-import com.maruko.mall.security.common.context.BaseContextHandler;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

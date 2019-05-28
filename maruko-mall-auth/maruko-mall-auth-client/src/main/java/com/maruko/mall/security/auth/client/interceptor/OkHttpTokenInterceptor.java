@@ -1,10 +1,10 @@
 package com.maruko.mall.security.auth.client.interceptor;
 
+import com.maruko.mall.common.context.BaseContextHandler;
 import com.maruko.mall.security.auth.client.config.ServiceAuthConfig;
 import com.maruko.mall.security.auth.client.config.UserAuthConfig;
 import com.maruko.mall.security.auth.client.jwt.ServiceAuthUtil;
-import com.maruko.mall.security.common.constant.CommonConstants;
-import com.maruko.mall.security.common.context.BaseContextHandler;
+import com.maruko.mall.security.auth.common.constatns.CommonConstants;
 import lombok.extern.java.Log;
 import okhttp3.Interceptor;
 import okhttp3.Request;

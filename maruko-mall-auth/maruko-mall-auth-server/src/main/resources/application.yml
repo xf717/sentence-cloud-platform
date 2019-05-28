@@ -1,21 +1,21 @@
 spring:
   application:
-    name: ace-auth
+    name: maruko-mall-auth
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
     default-property-inclusion: non_null
   redis:
     database: 2
-    host: ${REDIS_HOST:localhost}
+    host: ${REDIS_HOST:192.168.0.85}
     port: ${REDIS_PORT:6379}
     pool:
     max-active: 20
   datasource:
     name: test
-    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ag_auth_v1?useUnicode=true&characterEncoding=UTF8
+    url: jdbc:mysql://${MYSQL_HOST:192.168.0.86}:${MYSQL_PORT:3306}/ag_auth_v1?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true
     username: root
-    password: 123456QWE
+    password: root@123456
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
@@ -33,10 +33,10 @@ spring:
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
   rabbitmq:
-    host: ${RABBIT_MQ_HOST:localhost}
+    host: ${RABBIT_MQ_HOST:192.168.0.85}
     port:  ${RABBIT_MQ_PORT:5672}
-    username: guest
-    password: guest
+    username: rabbitmq
+    password: rabbitmq@123
   sleuth:
     enabled: true
     http:

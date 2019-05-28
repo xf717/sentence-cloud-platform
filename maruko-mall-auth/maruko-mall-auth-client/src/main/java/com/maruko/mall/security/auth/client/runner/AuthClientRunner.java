@@ -1,10 +1,10 @@
 package com.maruko.mall.security.auth.client.runner;
 
+import com.maruko.mall.common.msg.BaseResponse;
+import com.maruko.mall.common.msg.ObjectRestResponse;
 import com.maruko.mall.security.auth.client.config.ServiceAuthConfig;
 import com.maruko.mall.security.auth.client.config.UserAuthConfig;
 import com.maruko.mall.security.auth.client.feign.ServiceAuthFeign;
-import com.maruko.mall.security.common.msg.BaseResponse;
-import com.maruko.mall.security.common.msg.ObjectRestResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

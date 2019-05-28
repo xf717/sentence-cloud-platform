@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ace-auth
+    name: maruko-mall-auth
   cloud:
     nacos:
       config:

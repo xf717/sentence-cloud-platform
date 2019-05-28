@@ -53,7 +53,7 @@
 
     </dependencies>
     <build>
-        <finalName>ace-monitor</finalName>
+        <finalName>maruko-mall-monitor</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

@@ -23,7 +23,7 @@
  *
  */
 
-package com.github.wxiaoqi.security.api.vo.search;
+package com.maruko.mall.security.api.vo.search;
 
 
 import java.io.Serializable;

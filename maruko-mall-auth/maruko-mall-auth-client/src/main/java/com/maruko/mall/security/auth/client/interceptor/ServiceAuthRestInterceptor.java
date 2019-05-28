@@ -1,10 +1,10 @@
 package com.maruko.mall.security.auth.client.interceptor;
 
+import com.maruko.mall.common.exception.auth.ClientForbiddenException;
 import com.maruko.mall.security.auth.client.annotation.IgnoreClientToken;
 import com.maruko.mall.security.auth.client.config.ServiceAuthConfig;
 import com.maruko.mall.security.auth.client.jwt.ServiceAuthUtil;
 import com.maruko.mall.security.auth.common.util.jwt.IJWTInfo;
-import com.maruko.mall.security.common.exception.auth.ClientForbiddenException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
