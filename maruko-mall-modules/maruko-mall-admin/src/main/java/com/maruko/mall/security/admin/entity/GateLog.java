@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.admin.entity;
+package com.maruko.mall.security.admin.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 

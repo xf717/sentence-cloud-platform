@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.admin.mapper;
+package com.maruko.mall.security.admin.mapper;
 
-import com.github.wxiaoqi.security.admin.entity.GateLog;
+import com.maruko.mall.security.admin.entity.GateLog;
 import tk.mybatis.mapper.common.Mapper;
 
 public interface GateLogMapper extends Mapper<GateLog> {

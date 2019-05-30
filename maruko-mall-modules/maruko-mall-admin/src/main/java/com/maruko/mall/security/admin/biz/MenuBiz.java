@@ -1,11 +1,11 @@
-package com.github.wxiaoqi.security.admin.biz;
+package com.maruko.mall.security.admin.biz;
 
 import com.ace.cache.annotation.Cache;
 import com.ace.cache.annotation.CacheClear;
-import com.github.wxiaoqi.security.admin.constant.AdminCommonConstant;
-import com.github.wxiaoqi.security.admin.entity.Menu;
-import com.github.wxiaoqi.security.admin.mapper.MenuMapper;
-import com.github.wxiaoqi.security.common.biz.BaseBiz;
+import com.maruko.mall.common.biz.BaseBiz;
+import com.maruko.mall.security.admin.constant.AdminCommonConstant;
+import com.maruko.mall.security.admin.entity.Menu;
+import com.maruko.mall.security.admin.mapper.MenuMapper;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

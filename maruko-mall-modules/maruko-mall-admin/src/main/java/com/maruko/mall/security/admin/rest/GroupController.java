@@ -1,15 +1,15 @@
-package com.github.wxiaoqi.security.admin.rest;
+package com.maruko.mall.security.admin.rest;
 
-import com.github.wxiaoqi.security.admin.biz.GroupBiz;
-import com.github.wxiaoqi.security.admin.biz.ResourceAuthorityBiz;
-import com.github.wxiaoqi.security.admin.constant.AdminCommonConstant;
-import com.github.wxiaoqi.security.admin.entity.Group;
-import com.github.wxiaoqi.security.admin.vo.AuthorityMenuTree;
-import com.github.wxiaoqi.security.admin.vo.GroupTree;
-import com.github.wxiaoqi.security.admin.vo.GroupUsers;
-import com.github.wxiaoqi.security.common.msg.ObjectRestResponse;
-import com.github.wxiaoqi.security.common.rest.BaseController;
-import com.github.wxiaoqi.security.common.util.TreeUtil;
+import com.maruko.mall.common.msg.ObjectRestResponse;
+import com.maruko.mall.common.rest.BaseController;
+import com.maruko.mall.common.util.TreeUtil;
+import com.maruko.mall.security.admin.biz.GroupBiz;
+import com.maruko.mall.security.admin.biz.ResourceAuthorityBiz;
+import com.maruko.mall.security.admin.constant.AdminCommonConstant;
+import com.maruko.mall.security.admin.entity.Group;
+import com.maruko.mall.security.admin.vo.AuthorityMenuTree;
+import com.maruko.mall.security.admin.vo.GroupTree;
+import com.maruko.mall.security.admin.vo.GroupUsers;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;

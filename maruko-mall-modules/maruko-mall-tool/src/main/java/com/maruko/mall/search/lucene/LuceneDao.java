@@ -23,13 +23,13 @@
  *
  */
 
-package com.github.wxiaoqi.search.lucene;
+package com.maruko.mall.search.lucene;
 
-import com.github.wxiaoqi.security.api.vo.search.IndexObject;
-import com.github.wxiaoqi.search.lucene.util.DocumentUtil;
-import com.github.wxiaoqi.search.lucene.util.IKAnalyzer5x;
-import com.github.wxiaoqi.search.lucene.util.QueryUtil;
-import com.github.wxiaoqi.security.common.msg.TableResultResponse;
+import com.maruko.mall.common.msg.TableResultResponse;
+import com.maruko.mall.security.api.vo.search.IndexObject;
+import com.maruko.mall.search.lucene.util.DocumentUtil;
+import com.maruko.mall.search.lucene.util.IKAnalyzer5x;
+import com.maruko.mall.search.lucene.util.QueryUtil;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.*;

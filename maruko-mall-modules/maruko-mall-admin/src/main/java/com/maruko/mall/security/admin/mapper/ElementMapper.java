@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.admin.mapper;
+package com.maruko.mall.security.admin.mapper;
 
-import com.github.wxiaoqi.security.admin.entity.Element;
+import com.maruko.mall.security.admin.entity.Element;
 import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.Mapper;
 

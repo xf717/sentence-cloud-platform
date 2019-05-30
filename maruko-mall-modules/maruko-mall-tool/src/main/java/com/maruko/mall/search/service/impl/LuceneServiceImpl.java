@@ -23,12 +23,12 @@
  *
  */
 
-package com.github.wxiaoqi.search.service.impl;
+package com.maruko.mall.search.service.impl;
 
-import com.github.wxiaoqi.security.api.vo.search.IndexObject;
-import com.github.wxiaoqi.search.lucene.LuceneDao;
-import com.github.wxiaoqi.search.service.LuceneService;
-import com.github.wxiaoqi.security.common.msg.TableResultResponse;
+import com.maruko.mall.common.msg.TableResultResponse;
+import com.maruko.mall.security.api.vo.search.IndexObject;
+import com.maruko.mall.search.lucene.LuceneDao;
+import com.maruko.mall.search.service.LuceneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,9 +1,9 @@
 package com.maruko.mall.security.auth.interceptor;
 
+import com.maruko.mall.common.context.BaseContextHandler;
 import com.maruko.mall.security.auth.common.util.jwt.IJWTInfo;
 import com.maruko.mall.security.auth.configuration.UserConfiguration;
 import com.maruko.mall.security.auth.util.user.JwtTokenUtil;
-import com.maruko.mall.security.common.context.BaseContextHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

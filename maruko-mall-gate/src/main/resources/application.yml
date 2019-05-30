@@ -17,18 +17,19 @@ feign:
 
 spring:
   application:
-      name: ace-gateway
+      name: maruko-mall-gateway
   redis:
       database: 2
-      host: 127.0.0.1
+      host: ${REDIS_HOST:192.168.0.85}
+      port: ${REDIS_PORT:6379}
       jedis:
         pool:
             max-active: 20
   rabbitmq:
-      host: ${RABBIT_MQ_HOST:localhost}
-      port:  ${RABBIT_MQ_PORT:5672}
-      username: guest
-      password: guest
+      host: ${RABBIT_MQ_HOST:192.168.0.85}
+      port: ${RABBIT_MQ_PORT:5672}
+      username: rabbitmq
+      password: rabbitmq@123
   sleuth:
     enabled: true
     http:
@@ -42,15 +43,15 @@ spring:
            enabled: true
        routes:
         # =====================================
-        - id: ace-auth
-          uri: lb://ace-auth
+        - id: maruko-mall-auth
+          uri: lb://maruko-mall-auth
           order: 8000
           predicates:
           - Path=/api/auth/**
           filters:
           - StripPrefix=2
-        - id: ace-admin
-          uri: lb://ace-admin
+        - id: maruko-mall-admin
+          uri: lb://maruko-admin
           order: 8001
           predicates:
           - Path=/api/admin/**
@@ -64,7 +65,7 @@ spring:
       dashboard: localhost:8080
 logging:
   level:
-    com.github.wxiaoqi.security.gate.v2: info
+    com.maruko.mall.security.gate.v2: info
 
 management:
   endpoints:
@@ -81,12 +82,12 @@ gate:
 
 
 auth:
-  serviceId: ace-auth
+  serviceId: maruko-mall-auth
   user:
     token-header: Authorization
   client:
     token-header: x-client-token
-    id: ace-gate  #不填则默认读取spring.application.name
+    id: maruko-mall-gate  #不填则默认读取spring.application.name
     secret: 123456
 
 

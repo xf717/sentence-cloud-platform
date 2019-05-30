@@ -1,7 +1,7 @@
-package com.github.wxiaoqi.security.admin;
+package com.maruko.mall.security.admin;
 
 import com.ace.cache.EnableAceCache;
-import com.github.wxiaoqi.security.auth.client.EnableAceAuthClient;
+import com.maruko.mall.security.auth.client.EnableAceAuthClient;
 import com.spring4all.swagger.EnableSwagger2Doc;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,12 +21,12 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableDiscoveryClient
 @EnableCircuitBreaker
 @SpringBootApplication
-@EnableFeignClients({"com.github.wxiaoqi.security.auth.client.feign"})
+@EnableFeignClients({"com.maruko.mall.security.auth.client.feign"})
 @EnableScheduling
 @EnableAceAuthClient
 @EnableAceCache
 @EnableTransactionManagement
-@MapperScan("com.github.wxiaoqi.security.admin.mapper")
+@MapperScan("com.maruko.mall.security.admin.mapper")
 @EnableSwagger2Doc
 public class AdminBootstrap {
     public static void main(String[] args) {

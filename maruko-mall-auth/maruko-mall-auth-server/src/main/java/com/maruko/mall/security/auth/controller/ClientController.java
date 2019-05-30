@@ -1,8 +1,8 @@
 package com.maruko.mall.security.auth.controller;
 
+import com.maruko.mall.common.msg.ObjectRestResponse;
 import com.maruko.mall.security.auth.configuration.KeyConfiguration;
 import com.maruko.mall.security.auth.service.AuthClientService;
-import com.maruko.mall.security.common.msg.ObjectRestResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

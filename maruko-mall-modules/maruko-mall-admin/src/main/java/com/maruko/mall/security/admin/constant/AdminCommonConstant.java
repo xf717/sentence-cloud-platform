@@ -1,4 +1,4 @@
-package com.github.wxiaoqi.security.admin.constant;
+package com.maruko.mall.security.admin.constant;
 
 /**
  * ${DESCRIPTION}

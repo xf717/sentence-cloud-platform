@@ -1,9 +1,9 @@
 package com.maruko.mall.security.auth.client.jwt;
 
+import com.maruko.mall.common.exception.auth.UserTokenException;
 import com.maruko.mall.security.auth.client.config.UserAuthConfig;
 import com.maruko.mall.security.auth.common.util.jwt.IJWTInfo;
 import com.maruko.mall.security.auth.common.util.jwt.JWTHelper;
-import com.maruko.mall.security.common.exception.auth.UserTokenException;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.SignatureException;
 import org.springframework.beans.factory.annotation.Autowired;

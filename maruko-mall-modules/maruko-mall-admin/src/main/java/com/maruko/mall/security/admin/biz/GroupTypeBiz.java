@@ -1,10 +1,10 @@
-package com.github.wxiaoqi.security.admin.biz;
+package com.maruko.mall.security.admin.biz;
 
+import com.maruko.mall.common.biz.BaseBiz;
 import org.springframework.stereotype.Service;
 
-import com.github.wxiaoqi.security.admin.entity.GroupType;
-import com.github.wxiaoqi.security.admin.mapper.GroupTypeMapper;
-import com.github.wxiaoqi.security.common.biz.BaseBiz;
+import com.maruko.mall.security.admin.entity.GroupType;
+import com.maruko.mall.security.admin.mapper.GroupTypeMapper;
 import org.springframework.transaction.annotation.Transactional;
 
 /**

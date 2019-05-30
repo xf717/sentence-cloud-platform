@@ -23,10 +23,10 @@
  *
  */
 
-package com.github.wxiaoqi.oss.cloud;
+package com.maruko.mall.oss.cloud;
 
-import com.github.wxiaoqi.config.CloudStorageConfig;
-import com.github.wxiaoqi.security.common.exception.BaseException;
+import com.maruko.mall.common.exception.BaseException;
+import com.maruko.mall.config.CloudStorageConfig;
 import com.qiniu.common.Zone;
 import com.qiniu.http.Response;
 import com.qiniu.storage.Configuration;

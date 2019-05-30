@@ -23,7 +23,7 @@
  *
  */
 
-package com.github.wxiaoqi.search.lucene.util;
+package com.maruko.mall.search.lucene.util;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.queryparser.classic.MultiFieldQueryParser;

@@ -1,8 +1,8 @@
 package com.maruko.mall.security.auth.configuration;
 
+import com.maruko.mall.common.handler.GlobalExceptionHandler;
 import com.maruko.mall.security.auth.interceptor.ServiceAuthRestInterceptor;
 import com.maruko.mall.security.auth.interceptor.UserAuthRestInterceptor;
-import com.maruko.mall.security.common.handler.GlobalExceptionHandler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -18,7 +18,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Primary
 public class WebConfiguration implements WebMvcConfigurer {
     @Bean
-    GlobalExceptionHandler getGlobalExceptionHandler() {
+	GlobalExceptionHandler getGlobalExceptionHandler() {
         return new GlobalExceptionHandler();
     }
 

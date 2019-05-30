@@ -23,11 +23,9 @@
  *
  */
 
-package com.github.wxiaoqi.search.service;
-
-
-import com.github.wxiaoqi.security.api.vo.search.IndexObject;
-import com.github.wxiaoqi.security.common.msg.TableResultResponse;
+package com.maruko.mall.search.service;
+import com.maruko.mall.common.msg.TableResultResponse;
+import com.maruko.mall.security.api.vo.search.IndexObject;
 
 /**
  * lucense 接口

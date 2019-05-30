@@ -1,7 +1,7 @@
 logging:
     level:
 #        tk.mybatis: DEBUG
-        com.github.wxiaoqi: DEBUG
+        com.maruko.mall: DEBUG
 server:
     port: 9992
 

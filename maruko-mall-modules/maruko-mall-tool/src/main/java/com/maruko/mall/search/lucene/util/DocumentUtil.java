@@ -23,9 +23,9 @@
  *
  */
 
-package com.github.wxiaoqi.search.lucene.util;
+package com.maruko.mall.search.lucene.util;
 
-import com.github.wxiaoqi.security.api.vo.search.IndexObject;
+import com.maruko.mall.security.api.vo.search.IndexObject;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.document.Document;

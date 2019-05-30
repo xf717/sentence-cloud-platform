@@ -23,10 +23,10 @@
  *
  */
 
-package com.github.wxiaoqi.config;
+package com.maruko.mall.config;
 
 
-import com.github.wxiaoqi.search.lucene.LuceneDao;
+import com.maruko.mall.search.lucene.LuceneDao;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,10 +1,10 @@
 package com.maruko.mall.security.auth.biz;
 
+import com.maruko.mall.common.biz.BaseBiz;
 import com.maruko.mall.security.auth.entity.Client;
 import com.maruko.mall.security.auth.entity.ClientService;
 import com.maruko.mall.security.auth.mapper.ClientMapper;
 import com.maruko.mall.security.auth.mapper.ClientServiceMapper;
-import com.maruko.mall.security.common.biz.BaseBiz;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;

@@ -1,6 +1,7 @@
-package com.github.wxiaoqi.security.admin.vo;
+package com.maruko.mall.security.admin.vo;
 
-import com.github.wxiaoqi.security.common.vo.TreeNode;
+
+import com.maruko.mall.common.vo.TreeNode;
 
 /**
  * Created by Ace on 2017/6/12.

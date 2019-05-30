@@ -1,13 +1,13 @@
-package com.github.wxiaoqi.security.admin.biz;
+package com.maruko.mall.security.admin.biz;
 
 import com.ace.cache.annotation.Cache;
 import com.ace.cache.annotation.CacheClear;
-import com.github.wxiaoqi.security.admin.entity.User;
-import com.github.wxiaoqi.security.admin.mapper.MenuMapper;
-import com.github.wxiaoqi.security.admin.mapper.UserMapper;
-import com.github.wxiaoqi.security.auth.client.jwt.UserAuthUtil;
-import com.github.wxiaoqi.security.common.biz.BaseBiz;
-import com.github.wxiaoqi.security.common.constant.UserConstant;
+import com.maruko.mall.common.biz.BaseBiz;
+import com.maruko.mall.common.constant.UserConstant;
+import com.maruko.mall.security.admin.entity.User;
+import com.maruko.mall.security.admin.mapper.MenuMapper;
+import com.maruko.mall.security.admin.mapper.UserMapper;
+import com.maruko.mall.security.auth.client.jwt.UserAuthUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

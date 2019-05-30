@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.admin.vo;
+package com.maruko.mall.security.admin.vo;
 
-import com.github.wxiaoqi.security.admin.entity.User;
+import com.maruko.mall.security.admin.entity.User;
 
 import java.util.List;
 

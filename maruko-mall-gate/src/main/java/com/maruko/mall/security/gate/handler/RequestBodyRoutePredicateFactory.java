@@ -15,7 +15,7 @@
  *
  */
 
-package com.github.wxiaoqi.security.gate.handler;
+package com.maruko.mall.security.gate.handler;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

@@ -1,8 +1,8 @@
-package com.github.wxiaoqi.security.admin.config;
+package com.maruko.mall.security.admin.config;
 
-import com.github.wxiaoqi.security.auth.client.interceptor.ServiceAuthRestInterceptor;
-import com.github.wxiaoqi.security.auth.client.interceptor.UserAuthRestInterceptor;
-import com.github.wxiaoqi.security.common.handler.GlobalExceptionHandler;
+import com.maruko.mall.common.handler.GlobalExceptionHandler;
+import com.maruko.mall.security.auth.client.interceptor.ServiceAuthRestInterceptor;
+import com.maruko.mall.security.auth.client.interceptor.UserAuthRestInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -21,7 +21,7 @@ import java.util.Collections;
 @Primary
 public class WebConfiguration implements WebMvcConfigurer {
     @Bean
-    GlobalExceptionHandler getGlobalExceptionHandler() {
+	GlobalExceptionHandler getGlobalExceptionHandler() {
         return new GlobalExceptionHandler();
     }
 

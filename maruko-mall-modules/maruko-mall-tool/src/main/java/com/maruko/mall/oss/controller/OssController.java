@@ -23,11 +23,11 @@
  *
  */
 
-package com.github.wxiaoqi.oss.controller;
+package com.maruko.mall.oss.controller;
 
-import com.github.wxiaoqi.oss.cloud.OSSFactory;
-import com.github.wxiaoqi.security.common.exception.BaseException;
-import com.github.wxiaoqi.security.common.msg.ObjectRestResponse;
+import com.maruko.mall.common.exception.BaseException;
+import com.maruko.mall.common.msg.ObjectRestResponse;
+import com.maruko.mall.oss.cloud.OSSFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

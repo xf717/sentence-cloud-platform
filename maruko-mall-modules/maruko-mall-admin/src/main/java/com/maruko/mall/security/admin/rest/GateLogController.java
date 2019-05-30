@@ -1,18 +1,10 @@
-package com.github.wxiaoqi.security.admin.rest;
+package com.maruko.mall.security.admin.rest;
 
-import com.github.pagehelper.PageHelper;
-import com.github.wxiaoqi.security.admin.biz.GateLogBiz;
-import com.github.wxiaoqi.security.admin.entity.GateLog;
-import com.github.wxiaoqi.security.admin.entity.User;
-import com.github.wxiaoqi.security.common.msg.TableResultResponse;
-import com.github.wxiaoqi.security.common.rest.BaseController;
-import org.apache.commons.lang3.StringUtils;
+import com.maruko.mall.common.rest.BaseController;
+import com.maruko.mall.security.admin.biz.GateLogBiz;
+import com.maruko.mall.security.admin.entity.GateLog;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import tk.mybatis.mapper.entity.Example;
 
 /**
  * ${DESCRIPTION}

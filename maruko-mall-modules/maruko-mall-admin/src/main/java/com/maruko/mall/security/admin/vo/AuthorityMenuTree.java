@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.admin.vo;
+package com.maruko.mall.security.admin.vo;
 
-import com.github.wxiaoqi.security.common.vo.TreeNode;
+import com.maruko.mall.common.vo.TreeNode;
 import org.springframework.beans.BeanUtils;
 
 import java.io.Serializable;

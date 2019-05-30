@@ -1,8 +1,8 @@
-package com.github.wxiaoqi.security.admin.rpc;
+package com.maruko.mall.security.admin.rpc;
 
-import com.github.wxiaoqi.security.admin.biz.GateLogBiz;
-import com.github.wxiaoqi.security.admin.entity.GateLog;
-import com.github.wxiaoqi.security.api.vo.log.LogInfo;
+import com.maruko.mall.security.admin.biz.GateLogBiz;
+import com.maruko.mall.security.admin.entity.GateLog;
+import com.maruko.mall.security.api.vo.log.LogInfo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

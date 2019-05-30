@@ -23,7 +23,7 @@
  *
  */
 
-package com.github.wxiaoqi.oss.constants;
+package com.maruko.mall.oss.constants;
 
 /**
  * @author ace

@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.admin.entity;
+package com.maruko.mall.security.admin.entity;
 
-import com.github.wxiaoqi.security.admin.constant.AdminCommonConstant;
+import com.maruko.mall.security.admin.constant.AdminCommonConstant;
 
 import java.util.Date;
 import javax.persistence.*;

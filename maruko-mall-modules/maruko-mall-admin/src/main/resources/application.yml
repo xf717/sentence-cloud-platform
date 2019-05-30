@@ -1,7 +1,7 @@
 logging:
     level:
 #        tk.mybatis: DEBUG
-        com.github.wxiaoqi.security.admin: DEBUG
+        com.maruko.mall.security.admin: DEBUG
 spring:
     application:
         name: ace-admin
@@ -53,7 +53,7 @@ sample:
     enabled: false
 
 mybatis:
-    basepackage: com.github.wxiaoqi.security.admin.mapper
+    basepackage: com.maruko.mall.security.admin.mapper
     xmlLocation: classpath:mapper/**/*.xml
     mapper-locations: "classpath*:mapper/*.xml"
 
@@ -93,7 +93,7 @@ hystrix:
 # 配置swagger
 swagger:
     enabled: true
-    base-package: com.github.wxiaoqi.security.admin
+    base-package: com.maruko.mall.security.admin
     title: ace-admin
     version: 1.0.0.SNAPSHOT
     description: 管理后端服务

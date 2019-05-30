@@ -1,13 +1,13 @@
-package com.github.wxiaoqi.security.admin.rest;
+package com.maruko.mall.security.admin.rest;
 
-import com.github.wxiaoqi.security.admin.biz.MenuBiz;
-import com.github.wxiaoqi.security.admin.biz.UserBiz;
-import com.github.wxiaoqi.security.admin.entity.Menu;
-import com.github.wxiaoqi.security.admin.entity.User;
-import com.github.wxiaoqi.security.admin.rpc.service.PermissionService;
-import com.github.wxiaoqi.security.admin.vo.FrontUser;
-import com.github.wxiaoqi.security.admin.vo.MenuTree;
-import com.github.wxiaoqi.security.common.rest.BaseController;
+import com.maruko.mall.common.rest.BaseController;
+import com.maruko.mall.security.admin.biz.MenuBiz;
+import com.maruko.mall.security.admin.biz.UserBiz;
+import com.maruko.mall.security.admin.entity.Menu;
+import com.maruko.mall.security.admin.entity.User;
+import com.maruko.mall.security.admin.rpc.service.PermissionService;
+import com.maruko.mall.security.admin.vo.FrontUser;
+import com.maruko.mall.security.admin.vo.MenuTree;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;

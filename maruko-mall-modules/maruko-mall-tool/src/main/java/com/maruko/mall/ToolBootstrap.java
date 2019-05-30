@@ -23,7 +23,7 @@
  *
  */
 
-package com.github.wxiaoqi;
+package com.maruko.mall;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ace-gateway
+    name: maruko-mall-gateway
   cloud:
     nacos:
       config:

@@ -23,9 +23,9 @@
  *
  */
 
-package com.github.wxiaoqi.oss.cloud;
+package com.maruko.mall.oss.cloud;
 
-import com.github.wxiaoqi.config.CloudStorageConfig;
+import com.maruko.mall.config.CloudStorageConfig;
 import org.apache.commons.lang.StringUtils;
 import org.joda.time.DateTime;
 

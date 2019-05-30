@@ -1,16 +1,16 @@
-package com.github.wxiaoqi.security.admin.rest;
+package com.maruko.mall.security.admin.rest;
 
-import com.github.wxiaoqi.security.admin.biz.MenuBiz;
-import com.github.wxiaoqi.security.admin.biz.UserBiz;
-import com.github.wxiaoqi.security.admin.entity.Menu;
-import com.github.wxiaoqi.security.admin.vo.AuthorityMenuTree;
-import com.github.wxiaoqi.security.admin.vo.MenuTree;
-import com.github.wxiaoqi.security.common.rest.BaseController;
-import com.github.wxiaoqi.security.common.util.TreeUtil;
-import com.github.wxiaoqi.security.admin.constant.AdminCommonConstant;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.maruko.mall.common.rest.BaseController;
+import com.maruko.mall.common.util.TreeUtil;
+import com.maruko.mall.security.admin.biz.MenuBiz;
+import com.maruko.mall.security.admin.biz.UserBiz;
+import com.maruko.mall.security.admin.constant.AdminCommonConstant;
+import com.maruko.mall.security.admin.entity.Menu;
+import com.maruko.mall.security.admin.vo.AuthorityMenuTree;
+import com.maruko.mall.security.admin.vo.MenuTree;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

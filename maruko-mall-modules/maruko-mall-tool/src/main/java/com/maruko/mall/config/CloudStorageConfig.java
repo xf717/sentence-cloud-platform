@@ -23,7 +23,7 @@
  *
  */
 
-package com.github.wxiaoqi.config;
+package com.maruko.mall.config;
 
 import org.hibernate.validator.constraints.Range;
 import org.springframework.boot.context.properties.ConfigurationProperties;

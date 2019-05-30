@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.gate.config;
+package com.maruko.mall.security.gate.config;
 
-import com.github.wxiaoqi.security.gate.handler.RequestBodyRoutePredicateFactory;
+import com.maruko.mall.security.gate.handler.RequestBodyRoutePredicateFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

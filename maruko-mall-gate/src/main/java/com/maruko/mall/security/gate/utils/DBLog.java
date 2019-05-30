@@ -1,7 +1,7 @@
-package com.github.wxiaoqi.security.gate.utils;
+package com.maruko.mall.security.gate.utils;
 
-import com.github.wxiaoqi.security.api.vo.log.LogInfo;
-import com.github.wxiaoqi.security.gate.feign.ILogService;
+import com.maruko.mall.security.gate.feign.ILogService;
+import com.maruko.mall.security.api.vo.log.LogInfo;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;

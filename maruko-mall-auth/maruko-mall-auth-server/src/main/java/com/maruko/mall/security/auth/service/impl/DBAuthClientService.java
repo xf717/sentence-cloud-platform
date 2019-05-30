@@ -1,12 +1,12 @@
 package com.maruko.mall.security.auth.service.impl;
 
+import com.maruko.mall.common.exception.auth.ClientInvalidException;
+import com.maruko.mall.common.util.UUIDUtils;
 import com.maruko.mall.security.auth.bean.ClientInfo;
 import com.maruko.mall.security.auth.entity.Client;
 import com.maruko.mall.security.auth.mapper.ClientMapper;
 import com.maruko.mall.security.auth.service.AuthClientService;
 import com.maruko.mall.security.auth.util.client.ClientTokenUtil;
-import com.maruko.mall.security.common.exception.auth.ClientInvalidException;
-import com.maruko.mall.security.common.util.UUIDUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.context.ApplicationContext;

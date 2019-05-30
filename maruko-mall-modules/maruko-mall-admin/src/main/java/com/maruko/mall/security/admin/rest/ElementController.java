@@ -1,11 +1,12 @@
-package com.github.wxiaoqi.security.admin.rest;
+package com.maruko.mall.security.admin.rest;
 
-import com.github.wxiaoqi.security.admin.biz.ElementBiz;
-import com.github.wxiaoqi.security.admin.biz.UserBiz;
-import com.github.wxiaoqi.security.admin.entity.Element;
-import com.github.wxiaoqi.security.common.msg.ObjectRestResponse;
-import com.github.wxiaoqi.security.common.msg.TableResultResponse;
-import com.github.wxiaoqi.security.common.rest.BaseController;
+import com.maruko.mall.common.msg.ObjectRestResponse;
+import com.maruko.mall.common.msg.TableResultResponse;
+import com.maruko.mall.common.rest.BaseController;
+import com.maruko.mall.security.admin.biz.ElementBiz;
+import com.maruko.mall.security.admin.biz.UserBiz;
+import com.maruko.mall.security.admin.entity.Element;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

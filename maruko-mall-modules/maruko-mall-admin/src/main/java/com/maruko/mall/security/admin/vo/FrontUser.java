@@ -1,6 +1,6 @@
-package com.github.wxiaoqi.security.admin.vo;
+package com.maruko.mall.security.admin.vo;
 
-import com.github.wxiaoqi.security.api.vo.authority.PermissionInfo;
+import com.maruko.mall.security.api.vo.authority.PermissionInfo;
 
 import java.util.List;
 

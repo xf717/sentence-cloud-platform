@@ -23,10 +23,10 @@
  *
  */
 
-package com.github.wxiaoqi.oss.cloud;
+package com.maruko.mall.oss.cloud;
 
-import com.github.wxiaoqi.config.CloudStorageConfig;
-import com.github.wxiaoqi.oss.constants.OSSConstant;
+import com.maruko.mall.config.CloudStorageConfig;
+import com.maruko.mall.oss.constants.OSSConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
