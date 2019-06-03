@@ -4,16 +4,16 @@ logging:
         com.maruko.mall.security.admin: DEBUG
 spring:
     application:
-        name: ace-admin
+        name: maruko-mall-admin
     jackson:
         date-format: yyyy-MM-dd HH:mm:ss
         time-zone: GMT+8
         default-property-inclusion: non_null
     datasource:
         name: test
-        url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ag_admin_v1?useUnicode=true&characterEncoding=UTF8
+        url: jdbc:mysql://${MYSQL_HOST:192.168.0.86}:${MYSQL_PORT:3306}/ag_admin_v1?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true
         username: root
-        password: 123456QWE
+        password: root@123456
         # 使用druid数据源
         type: com.alibaba.druid.pool.DruidDataSource
         driver-class-name: com.mysql.jdbc.Driver
@@ -94,18 +94,18 @@ hystrix:
 swagger:
     enabled: true
     base-package: com.maruko.mall.security.admin
-    title: ace-admin
+    title: maruko-mall-admin
     version: 1.0.0.SNAPSHOT
     description: 管理后端服务
     contact:
         name: admin
 
 auth:
-  serviceId: ace-auth
+  serviceId: maruko-mall-auth
   user:
     token-header: Authorization
   client:
-    id: ace-admin
+    id: maruko-mall-admin
     secret: 123456
     token-header: x-client-token
 
@@ -115,12 +115,12 @@ redis:
          maxActive: 300
          maxIdle: 100
          maxWait: 1000
-    host: ${REDIS_HOST:localhost}
+    host: ${REDIS_HOST:192.168.0.85}
     port:  ${REDIS_PORT:6379}
     password:
     timeout: 2000
     # 服务或应用名
-    sysName: ace-admin
+    sysName: maruko-mall-admin
     enable: true
     database: 0
 

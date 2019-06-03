@@ -16,7 +16,7 @@ import java.util.List;
  * @author wanghaobin
  * @create 2017-06-21 8:11
  */
-@FeignClient(value = "ace-admin", fallback = UserServiceFallback.class)
+@FeignClient(value = "maruko-mall-admin", fallback = UserServiceFallback.class)
 public interface IUserService {
 	@RequestMapping(value = "/api/user/un/{username}/permissions", method = RequestMethod.GET)
 	public List<PermissionInfo> getPermissionByUsername(@PathVariable("username") String username);

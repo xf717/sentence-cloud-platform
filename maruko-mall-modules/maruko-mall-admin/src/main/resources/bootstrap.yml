@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ace-admin
+    name: maruko-mall-admin
   cloud:
     nacos:
       config:
