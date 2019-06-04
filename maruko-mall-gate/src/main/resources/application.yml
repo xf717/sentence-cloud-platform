@@ -51,7 +51,7 @@ spring:
           filters:
           - StripPrefix=2
         - id: maruko-mall-admin
-          uri: lb://maruko-admin
+          uri: lb://maruko-mall-admin
           order: 8001
           predicates:
           - Path=/api/admin/**

@@ -35,6 +35,7 @@
         <module>maruko-mall-auth</module>
         <module>maruko-mall-control</module>
         <module>maruko-mall-modules</module>
+        <module>maruko-leaf-server</module>
     </modules>
     <packaging>pom</packaging>
     <developers>
