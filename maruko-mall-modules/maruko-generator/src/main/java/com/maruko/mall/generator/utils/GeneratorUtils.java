@@ -111,6 +111,7 @@ public class GeneratorUtils {
         map.put("pathName", tableEntity.getClassname().toLowerCase());
         map.put("columns", tableEntity.getColumns());
         map.put("package", config.getString("package"));
+        map.put("commonPackage",config.getString("commonPackage"));
         map.put("author", config.getString("author"));
         map.put("email", config.getString("email"));
         map.put("datetime", DateUtils.format(new Date(), com.maruko.mall.generator.utils.DateUtils.DATE_TIME_PATTERN));

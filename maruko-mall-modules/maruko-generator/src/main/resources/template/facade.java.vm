@@ -1,11 +1,11 @@
 package ${package}.client.facade.api;
 
 import ${package}.client.dto.${className}DTO;
-import com.ktpfx.common.msg.BaseResponse;
-import com.ktpfx.common.msg.ListRestResponse;
-import com.ktpfx.common.msg.ObjectRestResponse;
-import com.ktpfx.common.msg.TableResultResponse;
-import com.ktpfx.common.page.PageRestRequest;
+import ${commonPackage}.msg.BaseResponse;
+import ${commonPackage}.msg.ListRestResponse;
+import ${commonPackage}.msg.ObjectRestResponse;
+import ${commonPackage}.msg.TableResultResponse;
+import ${commonPackage}.page.PageRestRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;

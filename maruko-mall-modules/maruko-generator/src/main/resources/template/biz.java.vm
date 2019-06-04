@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import ${package}.entity.${className};
 import ${package}.mapper.${className}Mapper;
-import com.maruko.mall.common.biz.BaseBiz;
+import ${commonPackage}.biz.BaseBiz;
 
 /**
  * ${comments}

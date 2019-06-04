@@ -3,19 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>maruko-mall</artifactId>
+        <artifactId>maruko-mall-modules</artifactId>
         <groupId>com.maruko.mall</groupId>
         <version>2.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <packaging>pom</packaging>
-    <artifactId>maruko-mall-modules</artifactId>
 
+    <groupId>com.maruko.mall</groupId>
+    <artifactId>maruko-mall-user</artifactId>
+    <packaging>pom</packaging>
+    <version>2.0-SNAPSHOT</version>
     <modules>
-        <module>maruko-mall-admin</module>
-        <module>maruko-mall-interface</module>
-        <module>maruko-generator</module>
-        <module>maruko-mall-tool</module>
-        <module>maruko-mall-user</module>
+        <module>user-server</module>
+        <module>user-facade</module>
     </modules>
+
+
 </project>
