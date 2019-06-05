@@ -16,6 +16,7 @@
     <modules>
         <module>user-server</module>
         <module>user-facade</module>
+        <module>maruko-mall-user-server</module>
     </modules>
 
 
