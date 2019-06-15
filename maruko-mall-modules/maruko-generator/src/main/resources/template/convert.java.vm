@@ -1,0 +1,26 @@
+package ${package}.convert;
+
+
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @date ${datetime}
+ */
+@Mapper
+public interface ${className}Convert {
+
+	${className}Convert} INSTANCE = Mappers.getMapper(${className}Convert.class);
+
+
+    @Mappings({})
+    ${className}DO convert(${className}DTO dto);
+
+
+
+
+
+}

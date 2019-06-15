@@ -13,7 +13,7 @@ spring:
     max-active: 20
   datasource:
     name: test
-    url: jdbc:mysql://${MYSQL_HOST:192.168.0.86}:${MYSQL_PORT:3306}/ag_auth_v1?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true
+    url: jdbc:mysql://${MYSQL_HOST:192.168.0.86}:${MYSQL_PORT:3306}/maruko_user?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true
     username: root
     password: root@123456
     # 使用druid数据源
@@ -49,10 +49,19 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:8080
-mybatis:
-  basepackage: com.maruko.mall.security.auth.mapper
-  xmlLocation: classpath:mapper/**/*.xml
-  mapper-locations: "classpath*:mapper/*.xml"
+#mybatis:
+#  basepackage: com.maruko.mall.security.auth.mapper
+#  xmlLocation: classpath:mapper/**/*.xml
+#  mapper-locations: "classpath*:mapper/*.xml"
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true # 虽然默认为 true ，但是还是显示去指定下。
+  global-config:
+    db-config:
+      id-type: auto
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.maruko.mall.user.server.entity
 
 server:
   port: 9777 #启动端口

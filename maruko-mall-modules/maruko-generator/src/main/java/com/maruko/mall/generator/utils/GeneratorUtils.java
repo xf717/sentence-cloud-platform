@@ -31,12 +31,12 @@ public class GeneratorUtils {
         templates.add("template/index.js.vm");
         templates.add("template/index.vue.vm");
 //        templates.add("template/mapper.xml.vm");
-		templates.add("template/newMapper.xml.vm");
+		templates.add("template/mybatisPlusMapper.xml.vm");
 //        templates.add("template/biz.java.vm");
 //        templates.add("template/entity.java.vm");
 		templates.add("template/newEntity.java.vm");
 //        templates.add("template/mapper.java.vm");
-		templates.add("template/newMapper.java.vm");
+		templates.add("template/mybatisPlusMapper.java.vm");
 //        templates.add("template/controller.java.vm");
 		templates.add("template/newController.java.vm");
 		templates.add("template/service.java.vm");
@@ -44,6 +44,8 @@ public class GeneratorUtils {
 		templates.add("template/dto.java.vm");
 		templates.add("template/facade.java.vm");
 		templates.add("template/feignClientFacade.java.vm");
+		templates.add("convert.java.vm");
+		templates.add("bo.java.vm");
         return templates;
     }
 
@@ -195,7 +197,7 @@ public class GeneratorUtils {
 //            return packagePath + "mapper" + File.separator + className + "Mapper.java";
 //        }
 
-		if (template.contains("newMapper.java.vm")) {
+		if (template.contains("mybatisPlusMapper.java.vm")) {
 			return packagePath + "mapper" + File.separator + "I" +className + "Mapper.java";
 		}
 
@@ -217,7 +219,7 @@ public class GeneratorUtils {
 //            return "main" + File.separator + "resources" + File.separator + "mapper" + File.separator + className + "Mapper.xml";
 //        }
 
-		if (template.contains("newMapper.xml.vm")) {
+		if (template.contains("mybatisPlusMapper.xml.vm")) {
 			return "main" + File.separator + "resources" + File.separator + "mapper" + File.separator + className + "Mapper.xml";
 		}
 
@@ -233,12 +235,20 @@ public class GeneratorUtils {
 			return packagePath + "client" +File.separator + "dto" + File.separator + className + "DTO.java";
 		}
 
+		if (template.contains("bo.java.vm")) {
+			return packagePath + "client" +File.separator + "bo" + File.separator + className + "BO.java";
+		}
+
 		if (template.contains("facade.java.vm")) {
 			return packagePath + "client" +File.separator + "facade" + File.separator  + "api"  + File.separator + "I"+ className + "Facade.java";
 		}
 
 		if (template.contains("feignClientFacade.java.vm")) {
 			return packagePath + "client" +File.separator + "facade"   + File.separator + "I"+ className + "FeignClientFacade.java";
+		}
+
+		if (template.contains("convert.java.vm")) {
+			return packagePath + "convert" + File.separator + className + "Convert.java";
 		}
 
         return null;

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="${package}.mapper.I${className}Mapper">
+<mapper namespace="${package}.mapper.${className}Mapper">
 
     <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="${package}.client.dto.${className}DTO" id="${classname}Map">
+    <resultMap type="${package}.entity.${className}DO" id="${classname}Map">
         #foreach($column in $columns)
             <result property="${column.attrname}" column="${column.columnName}"/>
         #end
     </resultMap>
 
-    <select id="query" resultMap="${classname}Map" parameterType="${package}.client.dto.${className}DTO">
+    <select id="query" resultMap="${classname}Map" parameterType="${package}.entity.${className}DO">
         select
         <trim suffixOverrides=",">
             #foreach($column in $columns)
@@ -28,7 +28,7 @@
         </where>
     </select>
 
-    <insert id="insertSelective${className}" parameterType="${package}.client.dto.${className}DTO"
+    <insert id="insertSelective${className}" parameterType="${package}.entity.${className}DO"
             useGeneratedKeys="true" keyColumn="${pk.columnName}" keyProperty="${pk.attrname}">
         insert into ${tableName}
         <trim prefix="(" suffix=")" suffixOverrides=",">

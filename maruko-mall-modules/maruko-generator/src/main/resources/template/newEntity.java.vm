@@ -8,6 +8,8 @@ import javax.persistence.*;
 #if(${hasBigDecimal})
 import java.math.BigDecimal;
 #end
+import lombok.Data;
+import lombok.experimental.Accessors;
 
 
 /**
@@ -17,6 +19,8 @@ import java.math.BigDecimal;
  * @date ${datetime}
  */
 @Table(name = "${tableName}")
+@Data
+@Accessors(chain = true)
 public class ${className}DO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -36,25 +40,5 @@ public class ${className}DO implements Serializable {
 	#end
 
 #end
-
-#foreach ($column in $columns)
-	/**
-	 * 设置：${column.comments}
-	 */
-	public void set${column.attrName}($column.attrType $column.attrname) {
-		this.$column.attrname = $column.attrname;
-	}
-	/**
-	 * 获取：${column.comments}
-	 */
-	public $column.attrType get${column.attrName}() {
-		return $column.attrname;
-	}
-#end
-
-	@Override
-	public String toString() {
-        return new ToStringBuilder(this)#foreach($column in $columns).append("$column.attrname",$column.attrname)#end.toString();
-	}
 
 }
