@@ -3,8 +3,8 @@ import fetch from 'utils/fetch';
 export function page(query) {
 return fetch({
 url: '/api/${moduleName}/${secondModuleName}/page',
-method: 'get',
-params: query
+method: 'post',
+data: query
 });
 }
 
