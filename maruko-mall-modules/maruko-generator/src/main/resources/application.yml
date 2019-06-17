@@ -9,8 +9,9 @@ server:
 spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
-        driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://192.168.0.86:3306/maruko_user?useUnicode=true&characterEncoding=UTF-8
+#        driverClassName: com.mysql.jdbc.Driver
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/maruko_user?useUnicode=true&characterEncoding=UTF8&allowMultiQueries=true&serverTimezone=UTC
         username: root
         password: root@123456
     jackson:

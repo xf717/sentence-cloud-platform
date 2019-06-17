@@ -44,8 +44,8 @@ public class GeneratorUtils {
 		templates.add("template/dto.java.vm");
 		templates.add("template/facade.java.vm");
 		templates.add("template/feignClientFacade.java.vm");
-		templates.add("convert.java.vm");
-		templates.add("bo.java.vm");
+		templates.add("template/convert.java.vm");
+		templates.add("template/bo.java.vm");
         return templates;
     }
 
@@ -198,7 +198,7 @@ public class GeneratorUtils {
 //        }
 
 		if (template.contains("mybatisPlusMapper.java.vm")) {
-			return packagePath + "mapper" + File.separator + "I" +className + "Mapper.java";
+			return packagePath + "mapper" + File.separator + className + "Mapper.java";
 		}
 
 //        if (template.contains("entity.java.vm")) {

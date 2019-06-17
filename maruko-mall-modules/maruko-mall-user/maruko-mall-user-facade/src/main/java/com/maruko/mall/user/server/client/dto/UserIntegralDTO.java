@@ -1,6 +1,9 @@
 package com.maruko.mall.user.server.client.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -8,9 +11,12 @@ import java.io.Serializable;
 /**
  * 用户_积分表
  * @author xiaofeng
- * @date 2019-06-04 22:35:12
+ * @date 2019-06-17 20:31:49
  */
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserIntegralDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;

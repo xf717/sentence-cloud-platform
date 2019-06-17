@@ -1,13 +1,18 @@
 package com.maruko.mall.user.server.client.facade.api;
 
-
+import com.maruko.mall.common.msg.BaseResponse;
+import com.maruko.mall.common.msg.ListRestResponse;
+import com.maruko.mall.common.msg.ObjectRestResponse;
+import com.maruko.mall.common.msg.TableResultResponse;
+import com.maruko.mall.common.page.PageRestRequest;
 import com.maruko.mall.user.server.client.dto.UserExtendDTO;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 用户_扩展表
  *
  * @author xiaofeng
- * @date 2019-06-04 22:35:12
+ * @date 2019-06-17 20:31:49
  */
 public interface IUserExtendFacade {
 

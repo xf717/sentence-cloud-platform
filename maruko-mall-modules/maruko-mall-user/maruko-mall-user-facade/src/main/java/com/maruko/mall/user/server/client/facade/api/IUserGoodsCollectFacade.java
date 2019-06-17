@@ -1,20 +1,18 @@
 package com.maruko.mall.user.server.client.facade.api;
 
+import com.maruko.mall.common.msg.BaseResponse;
+import com.maruko.mall.common.msg.ListRestResponse;
+import com.maruko.mall.common.msg.ObjectRestResponse;
+import com.maruko.mall.common.msg.TableResultResponse;
+import com.maruko.mall.common.page.PageRestRequest;
 import com.maruko.mall.user.server.client.dto.UserGoodsCollectDTO;
-import com.ktpfx.common.msg.BaseResponse;
-import com.ktpfx.common.msg.ListRestResponse;
-import com.ktpfx.common.msg.ObjectRestResponse;
-import com.ktpfx.common.msg.TableResultResponse;
-import com.ktpfx.common.page.PageRestRequest;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
 
 /**
  * 用户_商品收藏表
  *
  * @author xiaofeng
- * @date 2019-06-04 22:35:12
+ * @date 2019-06-17 20:31:49
  */
 public interface IUserGoodsCollectFacade {
 

@@ -5,15 +5,19 @@ import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
 /**
- * UserInfoConvert
+ * 用户_帐号信息
+ *
  * @author xiaofeng
- * @date 2019/06/15 13:21
- * @version 1.0
+ * @date 2019-06-17 20:31:49
  */
 @Mapper
 public interface UserInfoConvert {
 
-	UserInfoConvert INSTANCE = Mappers.getMapper(UserInfoConvert.class);
+	UserInfoConvert} INSTANCE = Mappers.getMapper(UserInfoConvert.class);
+
+
+    @Mappings({})
+    UserInfoDO convert(UserInfoDTO dto);
 
 
 
