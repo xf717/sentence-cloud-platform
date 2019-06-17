@@ -10,7 +10,7 @@ data: query
 
 export function addObj(obj) {
 return fetch({
-url: '/api/${moduleName}/${secondModuleName}',
+url: '/api/${moduleName}/${secondModuleName}/add',
 method: 'post',
 data: obj
 });
@@ -18,21 +18,21 @@ data: obj
 
 export function getObj(id) {
 return fetch({
-url: '/api/${moduleName}/${secondModuleName}/' + id,
+url: '/api/${moduleName}/${secondModuleName}/findById/' + id,
 method: 'get'
 })
 }
 
 export function delObj(id) {
 return fetch({
-url: '/api/${moduleName}/${secondModuleName}/' + id,
+url: '/api/${moduleName}/${secondModuleName}/remove/' + id,
 method: 'delete'
 })
 }
 
 export function putObj(id, obj) {
 return fetch({
-url: '/api/${moduleName}/${secondModuleName}/' + id,
+url: '/api/${moduleName}/${secondModuleName}/update/' + id,
 method: 'put',
 data: obj
 })
