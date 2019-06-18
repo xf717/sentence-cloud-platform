@@ -9,7 +9,7 @@ import com.maruko.mall.common.msg.TableResultResponse;
 import com.maruko.mall.common.page.Page;
 import com.maruko.mall.user.server.client.dto.UserAddressDTO;
 import com.maruko.mall.user.server.entity.UserAddressDO;
-import com.maruko.mall.user.server.mapper.IUserAddressMapper;
+import com.maruko.mall.user.server.mapper.UserAddressMapper;
 import com.maruko.mall.user.server.service.IUserAddressService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -32,14 +32,14 @@ import java.util.List;
 public class UserAddressServiceImpl implements IUserAddressService {
 
 	@Autowired
-	private IUserAddressMapper userAddressMapper;
+	private UserAddressMapper userAddressMapper;
 
 
 	@Override
 	public BaseResponse add(UserAddressDTO userAddressDTO) {
             UserAddressDO userAddressDO = new UserAddressDO();
 		BeanUtils.copyProperties(userAddressDTO, userAddressDO);
-		int effectRow = userAddressMapper.insertSelective(userAddressDO);
+		int effectRow = userAddressMapper.insert(userAddressDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -60,7 +60,7 @@ public class UserAddressServiceImpl implements IUserAddressService {
 	public BaseResponse update(UserAddressDTO userAddressDTO) {
             UserAddressDO userAddressDO = new UserAddressDO();
 		BeanUtils.copyProperties(userAddressDTO, userAddressDO);
-		int effectRow = userAddressMapper.updateByPrimaryKeySelective(userAddressDO);
+		int effectRow = userAddressMapper.updateById(userAddressDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -69,7 +69,7 @@ public class UserAddressServiceImpl implements IUserAddressService {
 
 	@Override
 	public BaseResponse remove(Integer id) {
-		Integer effectRow = userAddressMapper.deleteByPrimaryKey(id);
+		Integer effectRow = userAddressMapper.deleteById(id);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -83,7 +83,7 @@ public class UserAddressServiceImpl implements IUserAddressService {
 		if (!CollectionUtils.isEmpty(list)) {
 			return new TableResultResponse(list.getTotal(), list.getPages(), list.getResult());
         }
-		return new TableResultResponse<DTO>();
+		return new TableResultResponse<>();
 	}
 
 	@Override
@@ -97,7 +97,7 @@ public class UserAddressServiceImpl implements IUserAddressService {
 
 	@Override
 	public ObjectRestResponse<UserAddressDTO> findById(Integer id) {
-            UserAddressDO userAddressDO = userAddressMapper.selectByPrimaryKey(id);
+            UserAddressDO userAddressDO = userAddressMapper.selectById(id);
 		ObjectRestResponse<UserAddressDTO> objectRestResponse = new ObjectRestResponse<>();
             if (userAddressDO != null) {
                     UserAddressDTO userAddressDTO = new UserAddressDTO();

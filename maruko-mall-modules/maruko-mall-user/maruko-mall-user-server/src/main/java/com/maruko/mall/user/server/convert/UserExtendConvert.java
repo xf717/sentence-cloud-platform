@@ -1,6 +1,4 @@
 package com.maruko.mall.user.server.convert;
-
-
 import com.maruko.mall.user.server.client.bo.UserExtendBO;
 import com.maruko.mall.user.server.entity.UserExtendDO;
 import org.mapstruct.Mapper;

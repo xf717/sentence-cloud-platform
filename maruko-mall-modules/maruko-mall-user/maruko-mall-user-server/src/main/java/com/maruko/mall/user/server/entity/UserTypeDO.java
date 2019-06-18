@@ -1,9 +1,6 @@
 package com.maruko.mall.user.server.entity;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-
 import java.io.Serializable;
-import java.util.Date;
 import javax.persistence.*;
 import lombok.Data;
 import lombok.experimental.Accessors;

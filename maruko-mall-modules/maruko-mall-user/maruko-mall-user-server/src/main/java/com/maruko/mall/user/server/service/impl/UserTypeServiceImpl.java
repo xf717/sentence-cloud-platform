@@ -9,7 +9,7 @@ import com.maruko.mall.common.msg.TableResultResponse;
 import com.maruko.mall.common.page.Page;
 import com.maruko.mall.user.server.client.dto.UserTypeDTO;
 import com.maruko.mall.user.server.entity.UserTypeDO;
-import com.maruko.mall.user.server.mapper.IUserTypeMapper;
+import com.maruko.mall.user.server.mapper.UserTypeMapper;
 import com.maruko.mall.user.server.service.IUserTypeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -32,14 +32,14 @@ import java.util.List;
 public class UserTypeServiceImpl implements IUserTypeService {
 
 	@Autowired
-	private IUserTypeMapper userTypeMapper;
+	private UserTypeMapper userTypeMapper;
 
 
 	@Override
 	public BaseResponse add(UserTypeDTO userTypeDTO) {
             UserTypeDO userTypeDO = new UserTypeDO();
 		BeanUtils.copyProperties(userTypeDTO, userTypeDO);
-		int effectRow = userTypeMapper.insertSelective(userTypeDO);
+		int effectRow = userTypeMapper.insert(userTypeDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -60,7 +60,7 @@ public class UserTypeServiceImpl implements IUserTypeService {
 	public BaseResponse update(UserTypeDTO userTypeDTO) {
             UserTypeDO userTypeDO = new UserTypeDO();
 		BeanUtils.copyProperties(userTypeDTO, userTypeDO);
-		int effectRow = userTypeMapper.updateByPrimaryKeySelective(userTypeDO);
+		int effectRow = userTypeMapper.updateById(userTypeDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -69,7 +69,7 @@ public class UserTypeServiceImpl implements IUserTypeService {
 
 	@Override
 	public BaseResponse remove(Integer id) {
-		Integer effectRow = userTypeMapper.deleteByPrimaryKey(id);
+		Integer effectRow = userTypeMapper.deleteById(id);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -83,7 +83,7 @@ public class UserTypeServiceImpl implements IUserTypeService {
 		if (!CollectionUtils.isEmpty(list)) {
 			return new TableResultResponse(list.getTotal(), list.getPages(), list.getResult());
         }
-		return new TableResultResponse<DTO>();
+		return new TableResultResponse<>();
 	}
 
 	@Override
@@ -97,7 +97,7 @@ public class UserTypeServiceImpl implements IUserTypeService {
 
 	@Override
 	public ObjectRestResponse<UserTypeDTO> findById(Integer id) {
-            UserTypeDO userTypeDO = userTypeMapper.selectByPrimaryKey(id);
+            UserTypeDO userTypeDO = userTypeMapper.selectById(id);
 		ObjectRestResponse<UserTypeDTO> objectRestResponse = new ObjectRestResponse<>();
             if (userTypeDO != null) {
                     UserTypeDTO userTypeDTO = new UserTypeDTO();

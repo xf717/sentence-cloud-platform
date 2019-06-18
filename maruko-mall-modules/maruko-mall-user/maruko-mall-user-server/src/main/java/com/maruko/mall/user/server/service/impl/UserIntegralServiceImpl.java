@@ -9,7 +9,7 @@ import com.maruko.mall.common.msg.TableResultResponse;
 import com.maruko.mall.common.page.Page;
 import com.maruko.mall.user.server.client.dto.UserIntegralDTO;
 import com.maruko.mall.user.server.entity.UserIntegralDO;
-import com.maruko.mall.user.server.mapper.IUserIntegralMapper;
+import com.maruko.mall.user.server.mapper.UserIntegralMapper;
 import com.maruko.mall.user.server.service.IUserIntegralService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -32,14 +32,14 @@ import java.util.List;
 public class UserIntegralServiceImpl implements IUserIntegralService {
 
 	@Autowired
-	private IUserIntegralMapper userIntegralMapper;
+	private UserIntegralMapper userIntegralMapper;
 
 
 	@Override
 	public BaseResponse add(UserIntegralDTO userIntegralDTO) {
-            UserIntegralDO userIntegralDO = new UserIntegralDO();
+		UserIntegralDO userIntegralDO = new UserIntegralDO();
 		BeanUtils.copyProperties(userIntegralDTO, userIntegralDO);
-		int effectRow = userIntegralMapper.insertSelective(userIntegralDO);
+		int effectRow = userIntegralMapper.insert(userIntegralDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -47,20 +47,20 @@ public class UserIntegralServiceImpl implements IUserIntegralService {
 	}
 
 	@Override
-	public ObjectRestResponse<UserIntegralDTO> addUserIntegral(UserIntegralDTO userIntegralDTO){
+	public ObjectRestResponse<UserIntegralDTO> addUserIntegral(UserIntegralDTO userIntegralDTO) {
 		int effectRow = userIntegralMapper.insertSelectiveUserIntegral(userIntegralDTO);
 		ObjectRestResponse<UserIntegralDTO> objectRestResponse = new ObjectRestResponse<>();
 		if (effectRow > 0) {
 			objectRestResponse.data(userIntegralDTO);
-        }
+		}
 		return objectRestResponse;
-    }
+	}
 
 	@Override
 	public BaseResponse update(UserIntegralDTO userIntegralDTO) {
-            UserIntegralDO userIntegralDO = new UserIntegralDO();
+		UserIntegralDO userIntegralDO = new UserIntegralDO();
 		BeanUtils.copyProperties(userIntegralDTO, userIntegralDO);
-		int effectRow = userIntegralMapper.updateByPrimaryKeySelective(userIntegralDO);
+		int effectRow = userIntegralMapper.updateById(userIntegralDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -69,7 +69,7 @@ public class UserIntegralServiceImpl implements IUserIntegralService {
 
 	@Override
 	public BaseResponse remove(Integer id) {
-		Integer effectRow = userIntegralMapper.deleteByPrimaryKey(id);
+		Integer effectRow = userIntegralMapper.deleteById(id);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -79,11 +79,12 @@ public class UserIntegralServiceImpl implements IUserIntegralService {
 	@Override
 	public TableResultResponse<UserIntegralDTO> page(UserIntegralDTO userIntegralDTO, Page<UserIntegralDTO> page) {
 		PageHelper.startPage(page.getPageNo(), page.getPageSize());
-		com.github.pagehelper.Page<UserIntegralDTO> list = (com.github.pagehelper.Page<UserIntegralDTO>) userIntegralMapper.query(userIntegralDTO);
+		com.github.pagehelper.Page<UserIntegralDTO> list = (com.github.pagehelper.Page<UserIntegralDTO>) userIntegralMapper
+				.query(userIntegralDTO);
 		if (!CollectionUtils.isEmpty(list)) {
 			return new TableResultResponse(list.getTotal(), list.getPages(), list.getResult());
-        }
-		return new TableResultResponse<DTO>();
+		}
+		return new TableResultResponse<>();
 	}
 
 	@Override
@@ -97,20 +98,20 @@ public class UserIntegralServiceImpl implements IUserIntegralService {
 
 	@Override
 	public ObjectRestResponse<UserIntegralDTO> findById(Integer id) {
-            UserIntegralDO userIntegralDO = userIntegralMapper.selectByPrimaryKey(id);
+		UserIntegralDO userIntegralDO = userIntegralMapper.selectById(id);
 		ObjectRestResponse<UserIntegralDTO> objectRestResponse = new ObjectRestResponse<>();
-            if (userIntegralDO != null) {
-                    UserIntegralDTO userIntegralDTO = new UserIntegralDTO();
-				BeanUtils.copyProperties(userIntegralDO, userIntegralDTO);
-				objectRestResponse.data(userIntegralDTO);
-            }
+		if (userIntegralDO != null) {
+			UserIntegralDTO userIntegralDTO = new UserIntegralDTO();
+			BeanUtils.copyProperties(userIntegralDO, userIntegralDTO);
+			objectRestResponse.data(userIntegralDTO);
+		}
 		return objectRestResponse;
 	}
 
 	@Override
 	public ObjectRestResponse<UserIntegralDTO> findByCondition(UserIntegralDTO userIntegralDTO) {
 		List<UserIntegralDTO> list = userIntegralMapper.query(userIntegralDTO);
-        ObjectRestResponse<UserIntegralDTO> objectRestResponse = new ObjectRestResponse<>();
+		ObjectRestResponse<UserIntegralDTO> objectRestResponse = new ObjectRestResponse<>();
 		if (!CollectionUtils.isEmpty(list)) {
 			objectRestResponse.data(list.get(0));
 		}

@@ -1,7 +1,10 @@
 package com.maruko.mall.user.server.convert;
 
 
+import com.maruko.mall.user.server.client.bo.UserTypeBO;
+import com.maruko.mall.user.server.entity.UserTypeDO;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
 
 /**
@@ -13,14 +16,11 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface UserTypeConvert {
 
-	UserTypeConvert} INSTANCE = Mappers.getMapper(UserTypeConvert.class);
+	UserTypeConvert INSTANCE = Mappers.getMapper(UserTypeConvert.class);
 
 
-    @Mappings({})
-    UserTypeDO convert(UserTypeDTO dto);
-
-
-
+	@Mappings({})
+	UserTypeBO convert(UserTypeDO userTypeDO);
 
 
 }

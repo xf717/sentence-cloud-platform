@@ -1,6 +1,8 @@
-package com.maruko.mall.security.auth.configuration;
+package com.maruko.mall.user.server.configuration;
 
 import com.maruko.mall.common.handler.GlobalExceptionHandler;
+import com.maruko.mall.security.auth.client.interceptor.ServiceAuthRestInterceptor;
+import com.maruko.mall.security.auth.client.interceptor.UserAuthRestInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -27,12 +29,12 @@ public class WebConfiguration implements WebMvcConfigurer {
     }
 
     @Bean
-    ServiceAuthRestInterceptor getServiceAuthRestInterceptor() {
+	ServiceAuthRestInterceptor getServiceAuthRestInterceptor() {
         return new ServiceAuthRestInterceptor();
     }
 
     @Bean
-    UserAuthRestInterceptor getUserAuthRestInterceptor() {
+	UserAuthRestInterceptor getUserAuthRestInterceptor() {
         return new UserAuthRestInterceptor();
     }
 

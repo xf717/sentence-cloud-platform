@@ -9,7 +9,7 @@ import com.maruko.mall.common.msg.TableResultResponse;
 import com.maruko.mall.common.page.Page;
 import com.maruko.mall.user.server.client.dto.UserGoodsCollectDTO;
 import com.maruko.mall.user.server.entity.UserGoodsCollectDO;
-import com.maruko.mall.user.server.mapper.IUserGoodsCollectMapper;
+import com.maruko.mall.user.server.mapper.UserGoodsCollectMapper;
 import com.maruko.mall.user.server.service.IUserGoodsCollectService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -32,14 +32,14 @@ import java.util.List;
 public class UserGoodsCollectServiceImpl implements IUserGoodsCollectService {
 
 	@Autowired
-	private IUserGoodsCollectMapper userGoodsCollectMapper;
+	private UserGoodsCollectMapper userGoodsCollectMapper;
 
 
 	@Override
 	public BaseResponse add(UserGoodsCollectDTO userGoodsCollectDTO) {
-            UserGoodsCollectDO userGoodsCollectDO = new UserGoodsCollectDO();
+		UserGoodsCollectDO userGoodsCollectDO = new UserGoodsCollectDO();
 		BeanUtils.copyProperties(userGoodsCollectDTO, userGoodsCollectDO);
-		int effectRow = userGoodsCollectMapper.insertSelective(userGoodsCollectDO);
+		int effectRow = userGoodsCollectMapper.insert(userGoodsCollectDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -47,20 +47,20 @@ public class UserGoodsCollectServiceImpl implements IUserGoodsCollectService {
 	}
 
 	@Override
-	public ObjectRestResponse<UserGoodsCollectDTO> addUserGoodsCollect(UserGoodsCollectDTO userGoodsCollectDTO){
+	public ObjectRestResponse<UserGoodsCollectDTO> addUserGoodsCollect(UserGoodsCollectDTO userGoodsCollectDTO) {
 		int effectRow = userGoodsCollectMapper.insertSelectiveUserGoodsCollect(userGoodsCollectDTO);
 		ObjectRestResponse<UserGoodsCollectDTO> objectRestResponse = new ObjectRestResponse<>();
 		if (effectRow > 0) {
 			objectRestResponse.data(userGoodsCollectDTO);
-        }
+		}
 		return objectRestResponse;
-    }
+	}
 
 	@Override
 	public BaseResponse update(UserGoodsCollectDTO userGoodsCollectDTO) {
-            UserGoodsCollectDO userGoodsCollectDO = new UserGoodsCollectDO();
+		UserGoodsCollectDO userGoodsCollectDO = new UserGoodsCollectDO();
 		BeanUtils.copyProperties(userGoodsCollectDTO, userGoodsCollectDO);
-		int effectRow = userGoodsCollectMapper.updateByPrimaryKeySelective(userGoodsCollectDO);
+		int effectRow = userGoodsCollectMapper.updateById(userGoodsCollectDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -69,7 +69,7 @@ public class UserGoodsCollectServiceImpl implements IUserGoodsCollectService {
 
 	@Override
 	public BaseResponse remove(Integer id) {
-		Integer effectRow = userGoodsCollectMapper.deleteByPrimaryKey(id);
+		Integer effectRow = userGoodsCollectMapper.deleteById(id);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -77,13 +77,15 @@ public class UserGoodsCollectServiceImpl implements IUserGoodsCollectService {
 	}
 
 	@Override
-	public TableResultResponse<UserGoodsCollectDTO> page(UserGoodsCollectDTO userGoodsCollectDTO, Page<UserGoodsCollectDTO> page) {
+	public TableResultResponse<UserGoodsCollectDTO> page(UserGoodsCollectDTO userGoodsCollectDTO,
+			Page<UserGoodsCollectDTO> page) {
 		PageHelper.startPage(page.getPageNo(), page.getPageSize());
-		com.github.pagehelper.Page<UserGoodsCollectDTO> list = (com.github.pagehelper.Page<UserGoodsCollectDTO>) userGoodsCollectMapper.query(userGoodsCollectDTO);
+		com.github.pagehelper.Page<UserGoodsCollectDTO> list = (com.github.pagehelper.Page<UserGoodsCollectDTO>) userGoodsCollectMapper
+				.query(userGoodsCollectDTO);
 		if (!CollectionUtils.isEmpty(list)) {
 			return new TableResultResponse(list.getTotal(), list.getPages(), list.getResult());
-        }
-		return new TableResultResponse<DTO>();
+		}
+		return new TableResultResponse<>();
 	}
 
 	@Override
@@ -97,20 +99,20 @@ public class UserGoodsCollectServiceImpl implements IUserGoodsCollectService {
 
 	@Override
 	public ObjectRestResponse<UserGoodsCollectDTO> findById(Integer id) {
-            UserGoodsCollectDO userGoodsCollectDO = userGoodsCollectMapper.selectByPrimaryKey(id);
+		UserGoodsCollectDO userGoodsCollectDO = userGoodsCollectMapper.selectById(id);
 		ObjectRestResponse<UserGoodsCollectDTO> objectRestResponse = new ObjectRestResponse<>();
-            if (userGoodsCollectDO != null) {
-                    UserGoodsCollectDTO userGoodsCollectDTO = new UserGoodsCollectDTO();
-				BeanUtils.copyProperties(userGoodsCollectDO, userGoodsCollectDTO);
-				objectRestResponse.data(userGoodsCollectDTO);
-            }
+		if (userGoodsCollectDO != null) {
+			UserGoodsCollectDTO userGoodsCollectDTO = new UserGoodsCollectDTO();
+			BeanUtils.copyProperties(userGoodsCollectDO, userGoodsCollectDTO);
+			objectRestResponse.data(userGoodsCollectDTO);
+		}
 		return objectRestResponse;
 	}
 
 	@Override
 	public ObjectRestResponse<UserGoodsCollectDTO> findByCondition(UserGoodsCollectDTO userGoodsCollectDTO) {
 		List<UserGoodsCollectDTO> list = userGoodsCollectMapper.query(userGoodsCollectDTO);
-        ObjectRestResponse<UserGoodsCollectDTO> objectRestResponse = new ObjectRestResponse<>();
+		ObjectRestResponse<UserGoodsCollectDTO> objectRestResponse = new ObjectRestResponse<>();
 		if (!CollectionUtils.isEmpty(list)) {
 			objectRestResponse.data(list.get(0));
 		}

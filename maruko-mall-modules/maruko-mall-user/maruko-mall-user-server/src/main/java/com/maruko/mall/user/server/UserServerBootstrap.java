@@ -1,4 +1,4 @@
-package com.maruko.mall.security.auth;
+package com.maruko.mall.user.server;
 
 
 import org.mybatis.spring.annotation.MapperScan;
@@ -14,10 +14,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-@MapperScan("com.maruko.mall.security.auth.mapper")
+@MapperScan("com.maruko.mall.user.server.mapper")
 @EnableAutoConfiguration
-public class AuthBootstrap {
-    public static void main(String[] args) {
-        SpringApplication.run(AuthBootstrap.class, args);
-    }
+public class UserServerBootstrap {
+	public static void main(String[] args) {
+		SpringApplication.run(UserServerBootstrap.class, args);
+	}
 }

@@ -1,6 +1,4 @@
-package com.maruko.mall;
-
-import static org.junit.Assert.assertTrue;
+package com.maruko.mall.convert;
 
 import com.maruko.mall.common.util.DateUtil;
 import com.maruko.mall.user.server.client.bo.UserInfoBO;
@@ -10,21 +8,15 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * UserInfoConvertTest
+ * @author xiaofeng
+ * @date 2019/06/18 15:00
+ * @version 1.0
  */
-public class AppTest 
-{
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
-    }
+public class UserInfoConvertTest {
 
-    @Test
-    public void testBO(){
+	@Test
+	public void testUserInfoConvert(){
 		UserInfoDO userInfoDO = new UserInfoDO()
 				.setUserId(1)
 				.setMobile("13820895211")
@@ -39,7 +31,7 @@ public class AppTest
 				.setSalt("123456");
 		UserInfoBO userInfoBO = UserInfoConvert.INSTANCE.convert(userInfoDO);
 		Assert.assertTrue(userInfoBO.getUserId().equals(userInfoDO.getUserId()));
-		Assert.assertTrue(userInfoBO.getMobile().equals(userInfoDO.getMobile()));
+ 		Assert.assertTrue(userInfoBO.getMobile().equals(userInfoDO.getMobile()));
 		System.out.println("userInfoBO==" + userInfoBO);
 
 	}

@@ -9,7 +9,7 @@ import com.maruko.mall.common.msg.TableResultResponse;
 import com.maruko.mall.common.page.Page;
 import com.maruko.mall.user.server.client.dto.UserInfoDTO;
 import com.maruko.mall.user.server.entity.UserInfoDO;
-import com.maruko.mall.user.server.mapper.IUserInfoMapper;
+import com.maruko.mall.user.server.mapper.UserInfoMapper;
 import com.maruko.mall.user.server.service.IUserInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -32,14 +32,14 @@ import java.util.List;
 public class UserInfoServiceImpl implements IUserInfoService {
 
 	@Autowired
-	private IUserInfoMapper userInfoMapper;
+	private UserInfoMapper userInfoMapper;
 
 
 	@Override
 	public BaseResponse add(UserInfoDTO userInfoDTO) {
-            UserInfoDO userInfoDO = new UserInfoDO();
+		UserInfoDO userInfoDO = new UserInfoDO();
 		BeanUtils.copyProperties(userInfoDTO, userInfoDO);
-		int effectRow = userInfoMapper.insertSelective(userInfoDO);
+		int effectRow = userInfoMapper.insert(userInfoDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -47,20 +47,20 @@ public class UserInfoServiceImpl implements IUserInfoService {
 	}
 
 	@Override
-	public ObjectRestResponse<UserInfoDTO> addUserInfo(UserInfoDTO userInfoDTO){
+	public ObjectRestResponse<UserInfoDTO> addUserInfo(UserInfoDTO userInfoDTO) {
 		int effectRow = userInfoMapper.insertSelectiveUserInfo(userInfoDTO);
 		ObjectRestResponse<UserInfoDTO> objectRestResponse = new ObjectRestResponse<>();
 		if (effectRow > 0) {
 			objectRestResponse.data(userInfoDTO);
-        }
+		}
 		return objectRestResponse;
-    }
+	}
 
 	@Override
 	public BaseResponse update(UserInfoDTO userInfoDTO) {
-            UserInfoDO userInfoDO = new UserInfoDO();
+		UserInfoDO userInfoDO = new UserInfoDO();
 		BeanUtils.copyProperties(userInfoDTO, userInfoDO);
-		int effectRow = userInfoMapper.updateByPrimaryKeySelective(userInfoDO);
+		int effectRow = userInfoMapper.updateById(userInfoDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -69,7 +69,7 @@ public class UserInfoServiceImpl implements IUserInfoService {
 
 	@Override
 	public BaseResponse remove(Integer id) {
-		Integer effectRow = userInfoMapper.deleteByPrimaryKey(id);
+		Integer effectRow = userInfoMapper.deleteById(id);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -79,11 +79,12 @@ public class UserInfoServiceImpl implements IUserInfoService {
 	@Override
 	public TableResultResponse<UserInfoDTO> page(UserInfoDTO userInfoDTO, Page<UserInfoDTO> page) {
 		PageHelper.startPage(page.getPageNo(), page.getPageSize());
-		com.github.pagehelper.Page<UserInfoDTO> list = (com.github.pagehelper.Page<UserInfoDTO>) userInfoMapper.query(userInfoDTO);
+		com.github.pagehelper.Page<UserInfoDTO> list = (com.github.pagehelper.Page<UserInfoDTO>) userInfoMapper
+				.query(userInfoDTO);
 		if (!CollectionUtils.isEmpty(list)) {
 			return new TableResultResponse(list.getTotal(), list.getPages(), list.getResult());
-        }
-		return new TableResultResponse<DTO>();
+		}
+		return new TableResultResponse<>();
 	}
 
 	@Override
@@ -97,20 +98,20 @@ public class UserInfoServiceImpl implements IUserInfoService {
 
 	@Override
 	public ObjectRestResponse<UserInfoDTO> findById(Integer id) {
-            UserInfoDO userInfoDO = userInfoMapper.selectByPrimaryKey(id);
+		UserInfoDO userInfoDO = userInfoMapper.selectById(id);
 		ObjectRestResponse<UserInfoDTO> objectRestResponse = new ObjectRestResponse<>();
-            if (userInfoDO != null) {
-                    UserInfoDTO userInfoDTO = new UserInfoDTO();
-				BeanUtils.copyProperties(userInfoDO, userInfoDTO);
-				objectRestResponse.data(userInfoDTO);
-            }
+		if (userInfoDO != null) {
+			UserInfoDTO userInfoDTO = new UserInfoDTO();
+			BeanUtils.copyProperties(userInfoDO, userInfoDTO);
+			objectRestResponse.data(userInfoDTO);
+		}
 		return objectRestResponse;
 	}
 
 	@Override
 	public ObjectRestResponse<UserInfoDTO> findByCondition(UserInfoDTO userInfoDTO) {
 		List<UserInfoDTO> list = userInfoMapper.query(userInfoDTO);
-        ObjectRestResponse<UserInfoDTO> objectRestResponse = new ObjectRestResponse<>();
+		ObjectRestResponse<UserInfoDTO> objectRestResponse = new ObjectRestResponse<>();
 		if (!CollectionUtils.isEmpty(list)) {
 			objectRestResponse.data(list.get(0));
 		}

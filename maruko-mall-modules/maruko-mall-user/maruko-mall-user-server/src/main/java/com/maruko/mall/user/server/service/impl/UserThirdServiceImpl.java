@@ -9,7 +9,7 @@ import com.maruko.mall.common.msg.TableResultResponse;
 import com.maruko.mall.common.page.Page;
 import com.maruko.mall.user.server.client.dto.UserThirdDTO;
 import com.maruko.mall.user.server.entity.UserThirdDO;
-import com.maruko.mall.user.server.mapper.IUserThirdMapper;
+import com.maruko.mall.user.server.mapper.UserThirdMapper;
 import com.maruko.mall.user.server.service.IUserThirdService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -32,14 +32,14 @@ import java.util.List;
 public class UserThirdServiceImpl implements IUserThirdService {
 
 	@Autowired
-	private IUserThirdMapper userThirdMapper;
+	private UserThirdMapper userThirdMapper;
 
 
 	@Override
 	public BaseResponse add(UserThirdDTO userThirdDTO) {
             UserThirdDO userThirdDO = new UserThirdDO();
 		BeanUtils.copyProperties(userThirdDTO, userThirdDO);
-		int effectRow = userThirdMapper.insertSelective(userThirdDO);
+		int effectRow = userThirdMapper.insert(userThirdDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -60,7 +60,7 @@ public class UserThirdServiceImpl implements IUserThirdService {
 	public BaseResponse update(UserThirdDTO userThirdDTO) {
             UserThirdDO userThirdDO = new UserThirdDO();
 		BeanUtils.copyProperties(userThirdDTO, userThirdDO);
-		int effectRow = userThirdMapper.updateByPrimaryKeySelective(userThirdDO);
+		int effectRow = userThirdMapper.updateById(userThirdDO);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -69,7 +69,7 @@ public class UserThirdServiceImpl implements IUserThirdService {
 
 	@Override
 	public BaseResponse remove(Integer id) {
-		Integer effectRow = userThirdMapper.deleteByPrimaryKey(id);
+		Integer effectRow = userThirdMapper.deleteById(id);
 		if (effectRow > 0) {
 			return BaseResponse.success(StatusEnum.SUCCESS.getDescribe());
 		}
@@ -83,7 +83,7 @@ public class UserThirdServiceImpl implements IUserThirdService {
 		if (!CollectionUtils.isEmpty(list)) {
 			return new TableResultResponse(list.getTotal(), list.getPages(), list.getResult());
         }
-		return new TableResultResponse<DTO>();
+		return new TableResultResponse<>();
 	}
 
 	@Override
@@ -97,7 +97,7 @@ public class UserThirdServiceImpl implements IUserThirdService {
 
 	@Override
 	public ObjectRestResponse<UserThirdDTO> findById(Integer id) {
-            UserThirdDO userThirdDO = userThirdMapper.selectByPrimaryKey(id);
+            UserThirdDO userThirdDO = userThirdMapper.selectById(id);
 		ObjectRestResponse<UserThirdDTO> objectRestResponse = new ObjectRestResponse<>();
             if (userThirdDO != null) {
                     UserThirdDTO userThirdDTO = new UserThirdDTO();

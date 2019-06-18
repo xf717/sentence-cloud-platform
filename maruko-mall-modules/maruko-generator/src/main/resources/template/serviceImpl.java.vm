@@ -32,7 +32,7 @@ import java.util.List;
 public class ${className}ServiceImpl implements I${className}Service {
 
 	@Autowired
-	private I${className}Mapper ${classname}Mapper;
+	private ${className}Mapper ${classname}Mapper;
 
 
 	@Override
@@ -83,7 +83,7 @@ public class ${className}ServiceImpl implements I${className}Service {
 		if (!CollectionUtils.isEmpty(list)) {
 			return new TableResultResponse(list.getTotal(), list.getPages(), list.getResult());
         }
-		return new TableResultResponse<DTO>();
+		return new TableResultResponse<>();
 	}
 
 	@Override
