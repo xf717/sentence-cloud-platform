@@ -1,9 +1,13 @@
 package com.maruko.mall.convert;
 
 import com.maruko.mall.common.util.DateUtil;
+import com.maruko.mall.user.server.client.bo.UserAddressBO;
 import com.maruko.mall.user.server.client.bo.UserInfoBO;
+import com.maruko.mall.user.server.convert.UserAddressConvert;
 import com.maruko.mall.user.server.convert.UserInfoConvert;
+import com.maruko.mall.user.server.entity.UserAddressDO;
 import com.maruko.mall.user.server.entity.UserInfoDO;
+import com.maruko.mall.user.server.mapper.UserAddressMapper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -35,4 +39,24 @@ public class UserInfoConvertTest {
 		System.out.println("userInfoBO==" + userInfoBO);
 
 	}
+
+	@Test
+	public void testUserAddressConvert(){
+		UserAddressDO userAddressDO = new UserAddressDO()
+				.setAddress("福建省泉州市惠安县东岭镇")
+				.setAddressId(1)
+				.setUserId(2)
+				.setAlias("额额")
+				.setCityId(1)
+				.setContact("老纳法号叫乱来")
+				.setCountyId(2);
+		long startTime = System.currentTimeMillis();
+		UserAddressBO userAddressBO = UserAddressConvert.INSTANCE.convert(userAddressDO);
+		long endTime = System.currentTimeMillis();
+		System.out.println("总耗时==" + (endTime - startTime));
+		System.out.println(userAddressBO);
+
+	}
+
+
 }

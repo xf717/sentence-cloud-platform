@@ -96,16 +96,19 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!-- 实体映射工具 -->
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct</artifactId>
                 <version>${org.mapstruct.version}</version>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-jdk8</artifactId>
                 <version>${org.mapstruct.version}</version>
+                <scope>import</scope>
             </dependency>
 
         </dependencies>
@@ -133,6 +136,13 @@
                     <source>${maven.compile.source}</source>
                     <target>${maven.compile.target}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${org.mapstruct.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
                 </configuration>
             </plugin>
             <plugin>
@@ -163,8 +173,6 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
-
-
             <!--<plugin>-->
             <!--<groupId>org.apache.maven.plugins</groupId>-->
             <!--<artifactId>maven-javadoc-plugin</artifactId>-->
@@ -179,5 +187,6 @@
             <!--</executions>-->
             <!--</plugin>-->
         </plugins>
+
     </build>
 </project>
