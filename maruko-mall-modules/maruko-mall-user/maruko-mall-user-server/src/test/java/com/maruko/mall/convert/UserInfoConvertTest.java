@@ -7,7 +7,6 @@ import com.maruko.mall.user.server.convert.UserAddressConvert;
 import com.maruko.mall.user.server.convert.UserInfoConvert;
 import com.maruko.mall.user.server.entity.UserAddressDO;
 import com.maruko.mall.user.server.entity.UserInfoDO;
-import com.maruko.mall.user.server.mapper.UserAddressMapper;
 import org.junit.Assert;
 import org.junit.Test;
 
