@@ -1,12 +1,9 @@
 package com.maruko.mall.user.server.configuration;
 
 import com.maruko.mall.common.handler.GlobalExceptionHandler;
-import com.maruko.mall.security.auth.client.interceptor.ServiceAuthRestInterceptor;
-import com.maruko.mall.security.auth.client.interceptor.UserAuthRestInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -22,20 +19,20 @@ public class WebConfiguration implements WebMvcConfigurer {
         return new GlobalExceptionHandler();
     }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(getServiceAuthRestInterceptor()).addPathPatterns("/service/**");
-        registry.addInterceptor(getUserAuthRestInterceptor()).addPathPatterns("/service/**");
-    }
-
-    @Bean
-	ServiceAuthRestInterceptor getServiceAuthRestInterceptor() {
-        return new ServiceAuthRestInterceptor();
-    }
-
-    @Bean
-	UserAuthRestInterceptor getUserAuthRestInterceptor() {
-        return new UserAuthRestInterceptor();
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(getServiceAuthRestInterceptor()).addPathPatterns("/service/**");
+//        registry.addInterceptor(getUserAuthRestInterceptor()).addPathPatterns("/service/**");
+//    }
+//
+//    @Bean
+//	ServiceAuthRestInterceptor getServiceAuthRestInterceptor() {
+//        return new ServiceAuthRestInterceptor();
+//    }
+//
+//    @Bean
+//	UserAuthRestInterceptor getUserAuthRestInterceptor() {
+//        return new UserAuthRestInterceptor();
+//    }
 
 }

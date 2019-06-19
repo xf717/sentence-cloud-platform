@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.maruko.mall.user.server.mapper.UserTypeMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.maruko.mall.user.server.entity.UserTypeDO" id="userTypeMap">
+                    <result property="userTypeId" column="user_type_id"/>
+                    <result property="userTypeName" column="user_type_name"/>
+                    <result property="createTime" column="create_time"/>
+                    <result property="createBy" column="create_by"/>
+                    <result property="modifyTime" column="modify_time"/>
+                    <result property="modifyBy" column="modify_by"/>
+            </resultMap>
+
+    <select id="query" resultMap="userTypeMap" parameterType="com.maruko.mall.user.server.entity.UserTypeDO">
+        select
+        <trim suffixOverrides=",">
+                            user_type_id,
+                            user_type_name,
+                            create_time,
+                            create_by,
+                            modify_time,
+                            modify_by,
+                    </trim>
+        from user_type
+        <where>
+            1 = 1
+                            <if test="userTypeId != null">
+                    AND user_type_id = #{userTypeId}
+                </if>
+                            <if test="userTypeName != null">
+                    AND user_type_name = #{userTypeName}
+                </if>
+                            <if test="createTime != null">
+                    AND create_time = #{createTime}
+                </if>
+                            <if test="createBy != null">
+                    AND create_by = #{createBy}
+                </if>
+                            <if test="modifyTime != null">
+                    AND modify_time = #{modifyTime}
+                </if>
+                            <if test="modifyBy != null">
+                    AND modify_by = #{modifyBy}
+                </if>
+                    </where>
+    </select>
+
+    <insert id="insertSelectiveUserType" parameterType="com.maruko.mall.user.server.entity.UserTypeDO"
+            useGeneratedKeys="true" keyColumn="user_type_id" keyProperty="userTypeId">
+        insert into user_type
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                            <if test="userTypeId != null">
+                    user_type_id,
+                </if>
+                            <if test="userTypeName != null">
+                    user_type_name,
+                </if>
+                            <if test="createTime != null">
+                    create_time,
+                </if>
+                            <if test="createBy != null">
+                    create_by,
+                </if>
+                            <if test="modifyTime != null">
+                    modify_time,
+                </if>
+                            <if test="modifyBy != null">
+                    modify_by,
+                </if>
+                    </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                            <if test="userTypeId != null">
+                    #{userTypeId},
+                </if>
+                            <if test="userTypeName != null">
+                    #{userTypeName},
+                </if>
+                            <if test="createTime != null">
+                    #{createTime},
+                </if>
+                            <if test="createBy != null">
+                    #{createBy},
+                </if>
+                            <if test="modifyTime != null">
+                    #{modifyTime},
+                </if>
+                            <if test="modifyBy != null">
+                    #{modifyBy},
+                </if>
+                    </trim>
+    </insert>
+
+</mapper>

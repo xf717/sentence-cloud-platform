@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.maruko.mall.user.server.mapper.UserThirdMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.maruko.mall.user.server.entity.UserThirdDO" id="userThirdMap">
+                    <result property="userThirdId" column="user_third_id"/>
+                    <result property="userId" column="user_id"/>
+                    <result property="thirdType" column="third_type"/>
+                    <result property="accessToken" column="access_token"/>
+                    <result property="nickname" column="nickname"/>
+                    <result property="photo" column="photo"/>
+                    <result property="gender" column="gender"/>
+                    <result property="createTime" column="create_time"/>
+                    <result property="createBy" column="create_by"/>
+                    <result property="modifyTime" column="modify_time"/>
+                    <result property="modifyBy" column="modify_by"/>
+            </resultMap>
+
+    <select id="query" resultMap="userThirdMap" parameterType="com.maruko.mall.user.server.entity.UserThirdDO">
+        select
+        <trim suffixOverrides=",">
+                            user_third_id,
+                            user_id,
+                            third_type,
+                            access_token,
+                            nickname,
+                            photo,
+                            gender,
+                            create_time,
+                            create_by,
+                            modify_time,
+                            modify_by,
+                    </trim>
+        from user_third
+        <where>
+            1 = 1
+                            <if test="userThirdId != null">
+                    AND user_third_id = #{userThirdId}
+                </if>
+                            <if test="userId != null">
+                    AND user_id = #{userId}
+                </if>
+                            <if test="thirdType != null">
+                    AND third_type = #{thirdType}
+                </if>
+                            <if test="accessToken != null">
+                    AND access_token = #{accessToken}
+                </if>
+                            <if test="nickname != null">
+                    AND nickname = #{nickname}
+                </if>
+                            <if test="photo != null">
+                    AND photo = #{photo}
+                </if>
+                            <if test="gender != null">
+                    AND gender = #{gender}
+                </if>
+                            <if test="createTime != null">
+                    AND create_time = #{createTime}
+                </if>
+                            <if test="createBy != null">
+                    AND create_by = #{createBy}
+                </if>
+                            <if test="modifyTime != null">
+                    AND modify_time = #{modifyTime}
+                </if>
+                            <if test="modifyBy != null">
+                    AND modify_by = #{modifyBy}
+                </if>
+                    </where>
+    </select>
+
+    <insert id="insertSelectiveUserThird" parameterType="com.maruko.mall.user.server.entity.UserThirdDO"
+            useGeneratedKeys="true" keyColumn="user_third_id" keyProperty="userThirdId">
+        insert into user_third
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+                            <if test="userThirdId != null">
+                    user_third_id,
+                </if>
+                            <if test="userId != null">
+                    user_id,
+                </if>
+                            <if test="thirdType != null">
+                    third_type,
+                </if>
+                            <if test="accessToken != null">
+                    access_token,
+                </if>
+                            <if test="nickname != null">
+                    nickname,
+                </if>
+                            <if test="photo != null">
+                    photo,
+                </if>
+                            <if test="gender != null">
+                    gender,
+                </if>
+                            <if test="createTime != null">
+                    create_time,
+                </if>
+                            <if test="createBy != null">
+                    create_by,
+                </if>
+                            <if test="modifyTime != null">
+                    modify_time,
+                </if>
+                            <if test="modifyBy != null">
+                    modify_by,
+                </if>
+                    </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+                            <if test="userThirdId != null">
+                    #{userThirdId},
+                </if>
+                            <if test="userId != null">
+                    #{userId},
+                </if>
+                            <if test="thirdType != null">
+                    #{thirdType},
+                </if>
+                            <if test="accessToken != null">
+                    #{accessToken},
+                </if>
+                            <if test="nickname != null">
+                    #{nickname},
+                </if>
+                            <if test="photo != null">
+                    #{photo},
+                </if>
+                            <if test="gender != null">
+                    #{gender},
+                </if>
+                            <if test="createTime != null">
+                    #{createTime},
+                </if>
+                            <if test="createBy != null">
+                    #{createBy},
+                </if>
+                            <if test="modifyTime != null">
+                    #{modifyTime},
+                </if>
+                            <if test="modifyBy != null">
+                    #{modifyBy},
+                </if>
+                    </trim>
+    </insert>
+
+</mapper>
