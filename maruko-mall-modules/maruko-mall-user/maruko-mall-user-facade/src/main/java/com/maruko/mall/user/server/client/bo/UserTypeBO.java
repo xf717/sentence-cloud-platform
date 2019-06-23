@@ -14,7 +14,7 @@ import java.io.Serializable;
 @Accessors(chain = true)
 public class UserTypeBO implements Serializable {
 
-	private static final long serialVersionUID = 1L;
+//	private static final long serialVersionUID = 1L;
 
 	/**
 	 * id(不能做成自增长)

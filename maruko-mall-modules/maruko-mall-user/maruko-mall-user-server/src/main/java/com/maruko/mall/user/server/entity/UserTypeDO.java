@@ -1,9 +1,10 @@
 package com.maruko.mall.user.server.entity;
 
-import java.io.Serializable;
-import javax.persistence.*;
 import lombok.Data;
 import lombok.experimental.Accessors;
+
+import java.io.Serializable;
+import javax.persistence.*;
 
 
 /**

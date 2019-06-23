@@ -89,6 +89,11 @@ public class UserInfoDO implements Serializable {
      */
     @Column(name = "modify_by")
     private Integer modifyBy;
+
+	public static void main(String[] args) {
+		UserInfoDO userInfoDO = new UserInfoDO().setUserId(1).setNickname("123456");
+		System.out.println(userInfoDO);
+	}
 	
 
 }

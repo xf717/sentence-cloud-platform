@@ -1,14 +1,21 @@
 package com.maruko.mall.convert;
 
 import com.maruko.mall.common.util.DateUtil;
+import com.maruko.mall.user.server.client.bo.User;
 import com.maruko.mall.user.server.client.bo.UserAddressBO;
 import com.maruko.mall.user.server.client.bo.UserInfoBO;
+import com.maruko.mall.user.server.client.bo.UserTypeBO;
 import com.maruko.mall.user.server.convert.UserAddressConvert;
+import com.maruko.mall.user.server.convert.UserConvert;
 import com.maruko.mall.user.server.convert.UserInfoConvert;
+import com.maruko.mall.user.server.convert.UserTypeConvert;
 import com.maruko.mall.user.server.entity.UserAddressDO;
+import com.maruko.mall.user.server.entity.UserDO;
 import com.maruko.mall.user.server.entity.UserInfoDO;
+import com.maruko.mall.user.server.entity.UserTypeDO;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.beans.BeanUtils;
 
 /**
  * UserInfoConvertTest
@@ -33,11 +40,35 @@ public class UserInfoConvertTest {
 				.setPhoto("image/photo.jpg")
 				.setSalt("123456");
 		UserInfoBO userInfoBO = UserInfoConvert.INSTANCE.convert(userInfoDO);
+		System.out.println("userInfoBO==" + userInfoBO);
 		Assert.assertTrue(userInfoBO.getUserId().equals(userInfoDO.getUserId()));
  		Assert.assertTrue(userInfoBO.getMobile().equals(userInfoDO.getMobile()));
-		System.out.println("userInfoBO==" + userInfoBO);
-
 	}
+
+	@Test
+	public void testUserTypeConvert(){
+		UserTypeDO userTypeDO = new UserTypeDO()
+				.setUserTypeId(1)
+				.setUserTypeName("QQ")
+				.setCreateBy(1)
+				.setCreateTime(DateUtil.getCurrentTime())
+				.setModifyBy(1)
+				.setModifyTime(DateUtil.getCurrentTime());
+
+		UserTypeBO userTypeBO = new UserTypeBO();
+		BeanUtils.copyProperties(userTypeDO,userTypeBO);
+
+		System.out.println("userTypeBO==" + userTypeBO);
+	}
+
+	@Test
+	public void testUserConvert(){
+		UserDO userDO = new UserDO().setName("xin");
+		User user = UserConvert.INSTANCE.convert(userDO);
+		System.out.println(user);
+	}
+
+
 
 	@Test
 	public void testUserAddressConvert(){

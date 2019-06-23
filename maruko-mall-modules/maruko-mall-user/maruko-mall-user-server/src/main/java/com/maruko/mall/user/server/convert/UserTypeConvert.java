@@ -18,8 +18,7 @@ public interface UserTypeConvert {
 
 	UserTypeConvert INSTANCE = Mappers.getMapper(UserTypeConvert.class);
 
-
-	@Mappings({})
+//	@Mappings({})
 	UserTypeBO convert(UserTypeDO userTypeDO);
 
 

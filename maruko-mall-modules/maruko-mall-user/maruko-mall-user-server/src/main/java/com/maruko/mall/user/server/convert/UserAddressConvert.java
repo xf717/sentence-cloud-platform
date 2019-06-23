@@ -22,8 +22,8 @@ public interface UserAddressConvert {
 	@Mappings({})
 	UserAddressBO convert(UserAddressDO userAddressDO);
 
-	@Mappings({})
-	List<UserAddressBO> convert(List<UserAddressDO> userAddressDOS);
+//	@Mappings({})
+//	List<UserAddressBO> convert(List<UserAddressDO> userAddressDOS);
 
 
 }

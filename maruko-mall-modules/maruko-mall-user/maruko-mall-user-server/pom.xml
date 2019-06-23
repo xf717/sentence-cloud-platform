@@ -61,11 +61,11 @@
         </dependency>
 
         <!-- 通用mapper -->
-<!--        <dependency>-->
-<!--            <groupId>tk.mybatis</groupId>-->
-<!--            <artifactId>mapper-spring-boot-starter</artifactId>-->
-<!--            <version>1.1.2</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>tk.mybatis</groupId>-->
+        <!--            <artifactId>mapper-spring-boot-starter</artifactId>-->
+        <!--            <version>1.1.2</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -78,11 +78,11 @@
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.1.1</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.baomidou</groupId>-->
-<!--            <artifactId>mybatis-plus-generator</artifactId>-->
-<!--            <version>3.1.1</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.baomidou</groupId>-->
+        <!--            <artifactId>mybatis-plus-generator</artifactId>-->
+        <!--            <version>3.1.1</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -136,7 +136,6 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-jdk8</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>
