@@ -107,30 +107,30 @@
 
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-mybatis</artifactId>
+      <artifactId>sentence-spring-boot-starter-mybatis</artifactId>
     </dependency>
 
     <!-- redis缓存-->
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-redis</artifactId>
+      <artifactId>sentence-spring-boot-starter-redis</artifactId>
     </dependency>
 
     <!-- 消息队列-->
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-rocketmq</artifactId>
+      <artifactId>sentence-spring-boot-starter-rocketmq</artifactId>
     </dependency>
 
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-sms</artifactId>
+      <artifactId>sentence-spring-boot-starter-sms</artifactId>
     </dependency>
 
     <!--用户拦截-->
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-security-user</artifactId>
+      <artifactId>sentence-spring-boot-starter-security-user</artifactId>
     </dependency>
 
     <dependency>
@@ -163,7 +163,7 @@
     </dependency>
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-auth-client</artifactId>
+      <artifactId>sentence-auth-client</artifactId>
     </dependency>
 
   </dependencies>

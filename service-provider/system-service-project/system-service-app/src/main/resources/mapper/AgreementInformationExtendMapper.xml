@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.db.chaomaxs.systemservice.dal.mysql.mapper.content.AgreementInformationExtendMapper">
+<mapper namespace="com.github.xf717.systemservice.dal.mysql.mapper.content.AgreementInformationExtendMapper">
 
     <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.db.chaomaxs.systemservice.dal.mysql.dataobject.content.AgreementInformationExtendDO" id="BaseResultMap">
+    <resultMap type="com.github.xf717.systemservice.dal.mysql.dataobject.content.AgreementInformationExtendDO" id="BaseResultMap">
                     <result property="id" column="id"/>
                     <result property="content" column="content"/>
                     <result property="agreemenInfoId" column="agreemen_info_id"/>

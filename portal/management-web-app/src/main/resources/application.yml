@@ -25,7 +25,7 @@ swagger:
   title: 超级码场后台管理系统
   description: 超级码场后台管理系统
   version: 1.0.0
-  base-package: com.db.chaomaxs.managementweb.controller
+  base-package: com.github.xf717.managementweb.controller
 
 # 服务提供者调用
 chaomax:

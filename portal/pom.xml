@@ -15,7 +15,6 @@
     <module>management-web-app</module>
     <module>resource-web-app</module>
     <module>user-web-app</module>
-    <module>company-web-app</module>
     <module>passport-web-app</module>
   </modules>
 
@@ -28,7 +27,7 @@
     <dependencies>
       <dependency>
         <groupId>com.github.xf717</groupId>
-        <artifactId>chaomaxs-dependencies</artifactId>
+        <artifactId>sentence-dependencies</artifactId>
         <version>1.0-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>

@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.db.chaomaxs.systemservice.dal.mysql.mapper.auth.BaseUserMapper">
+<mapper namespace="com.github.xf717.systemservice.dal.mysql.mapper.auth.BaseUserMapper">
 
   <!-- 可根据自己的需求，是否要使用 -->
-  <resultMap type="com.db.chaomaxs.systemservice.dal.mysql.dataobject.auth.BaseUserDO"
+  <resultMap type="com.github.xf717.systemservice.dal.mysql.dataobject.auth.BaseUserDO"
     id="BaseResultMap">
     <result property="id" column="id"/>
     <result property="username" column="username"/>

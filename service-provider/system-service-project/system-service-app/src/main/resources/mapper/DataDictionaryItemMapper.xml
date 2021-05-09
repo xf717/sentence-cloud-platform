@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.db.chaomaxs.systemservice.dal.mysql.mapper.dict.DataDictionaryItemMapper">
+<mapper namespace="com.github.xf717.systemservice.dal.mysql.mapper.dict.DataDictionaryItemMapper">
 
     <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.db.chaomaxs.systemservice.dal.mysql.dataobject.dict.DataDictionaryItemDO" id="BaseResultMap">
+    <resultMap type="com.github.xf717.systemservice.dal.mysql.dataobject.dict.DataDictionaryItemDO" id="BaseResultMap">
                     <result property="id" column="id"/>
                     <result property="dictionaryTypeId" column="dictionary_type_id"/>
                     <result property="dictText" column="dict_text"/>
@@ -17,7 +17,7 @@
                     <result property="updateTime" column="update_time"/>
                     <result property="updateBy" column="update_by"/>
             </resultMap>
-  <select id="getDictItemBydictTypeName" resultType="com.db.chaomaxs.systemservice.rpc.dict.dto.DataDictionaryItemQueryRespDTO" >
+  <select id="getDictItemBydictTypeName" resultType="com.github.xf717.systemservice.rpc.dict.dto.DataDictionaryItemQueryRespDTO" >
     select it.id,it.dictionary_type_id,it.dict_text,it.dict_value,it.sort,it.is_enabled,ty.code
     from data_dictionary_type ty left join data_dictionary_item it on it.dictionary_type_id = ty.id
     where it.is_deleted = 0 and it.is_enabled = 1 and ty.is_deleted = 0 and ty.is_enabled = 1 and ty.id in  (${ids})

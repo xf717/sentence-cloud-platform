@@ -60,10 +60,10 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- chaomaxs 基础 bom 文件  -->
+      <!-- sentence 基础 bom 文件  -->
       <dependency>
         <groupId>com.github.xf717</groupId>
-        <artifactId>chaomaxs-dependencies</artifactId>
+        <artifactId>sentence-dependencies</artifactId>
         <version>1.0-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>

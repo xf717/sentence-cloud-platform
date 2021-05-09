@@ -1,0 +1,43 @@
+package com.github.xf717.logservice.dal.mysql.mapper.login;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.github.xf717.mybatis.core.query.QueryWrapperX;
+import com.github.xf717.logservice.dal.mysql.dataobject.login.UserLoginLogDO;
+import com.github.xf717.logservice.rpc.login.dto.UserLoginLogListQueryReqDTO;
+import com.github.xf717.logservice.rpc.login.dto.UserLoginLogPageReqDTO;
+import java.util.List;
+import org.springframework.stereotype.Repository;
+
+/**
+ * 用户_登录日志
+ *
+ * @author xiaofeng
+ * @date 2021-04-06 17:48:03
+ */
+@Repository
+public interface UserLoginLogMapper extends BaseMapper<UserLoginLogDO> {
+
+  /**
+   * 根据参数查询数据
+   *
+   * @param listReqDTO
+   * @return
+   */
+  default List<UserLoginLogDO> selectList(UserLoginLogListQueryReqDTO listReqDTO) {
+    return selectList(new QueryWrapperX<UserLoginLogDO>());
+  }
+
+  /**
+  * 查询分页
+  *
+  * @param pageReqDTO
+  * @return
+  */
+  default IPage<UserLoginLogDO> selectPage(UserLoginLogPageReqDTO pageReqDTO) {
+    return selectPage(new Page<>(pageReqDTO.getPageNo(), pageReqDTO.getPageSize()),
+        new QueryWrapperX<UserLoginLogDO>());
+  }
+
+}

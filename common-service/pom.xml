@@ -14,15 +14,15 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>chaomaxs-gateway</module>
-    <module>chaomaxs-auth</module>
+    <module>sentence-gateway</module>
+    <module>sentence-auth</module>
   </modules>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>com.github.xf717</groupId>
-        <artifactId>chaomaxs-dependencies</artifactId>
+        <artifactId>sentence-dependencies</artifactId>
         <version>1.0-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>

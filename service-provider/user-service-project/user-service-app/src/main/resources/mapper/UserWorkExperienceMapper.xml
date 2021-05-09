@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.db.chaomaxs.userservice.dal.mysql.mapper.resume.UserWorkExperienceMapper">
+<mapper namespace="com.github.xf717.userservice.dal.mysql.mapper.resume.UserWorkExperienceMapper">
 
   <!-- 可根据自己的需求，是否要使用 -->
-  <resultMap type="com.db.chaomaxs.userservice.dal.mysql.dataobject.resume.UserWorkExperienceDO"
+  <resultMap type="com.github.xf717.userservice.dal.mysql.dataobject.resume.UserWorkExperienceDO"
     id="BaseResultMap">
     <result property="id" column="id"/>
     <result property="userResumeId" column="user_resume_id"/>

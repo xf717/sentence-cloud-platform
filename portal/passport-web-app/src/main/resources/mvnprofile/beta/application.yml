@@ -25,7 +25,7 @@ swagger:
   title: 登录
   description: 求职端、企业端登录接口
   version: 1.0.0
-  base-package: com.db.chaomaxs.passportweb.controller
+  base-package: com.github.xf717.passportweb.controller
 
 # 服务提供者调用
 chaomax:
@@ -52,6 +52,6 @@ wx:
   mp:
     app-id: wx3ee39993dd185c24 #目前测试帐号,正式等上线后在进行更换
     secret: e4dea0bebcd1e28a74701768a2ff74c7 #目前测试帐号,正式等上线后在进行更换
-    token: chaomaxs
+    token: sentence
     aes-key: xxx
     redirect-uri: http://localhost:8080   #自定义业务重定向地址

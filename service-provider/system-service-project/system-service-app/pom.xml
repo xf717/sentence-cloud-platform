@@ -101,18 +101,18 @@
 
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-mybatis</artifactId>
+      <artifactId>sentence-spring-boot-starter-mybatis</artifactId>
     </dependency>
 
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-redis</artifactId>
+      <artifactId>sentence-spring-boot-starter-redis</artifactId>
     </dependency>
 
     <!--用户拦截-->
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-security-user</artifactId>
+      <artifactId>sentence-spring-boot-starter-security-user</artifactId>
     </dependency>
 
     <dependency>

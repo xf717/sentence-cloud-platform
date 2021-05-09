@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.db.chaomaxs.web.config.CommonWebAutoConfiguration

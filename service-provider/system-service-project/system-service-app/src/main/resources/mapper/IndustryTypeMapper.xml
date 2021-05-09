@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.db.chaomaxs.systemservice.dal.mysql.mapper.content.IndustryTypeMapper">
+<mapper namespace="com.github.xf717.systemservice.dal.mysql.mapper.content.IndustryTypeMapper">
 
   <!-- 可根据自己的需求，是否要使用 -->
-  <resultMap type="com.db.chaomaxs.systemservice.dal.mysql.dataobject.content.IndustryTypeDO"
+  <resultMap type="com.github.xf717.systemservice.dal.mysql.dataobject.content.IndustryTypeDO"
     id="BaseResultMap">
     <result property="id" column="id"/>
     <result property="typeName" column="type_name"/>

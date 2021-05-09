@@ -3,10 +3,10 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper
-  namespace="com.db.chaomaxs.systemservice.dal.mysql.mapper.auth.BaseGroupTypeMapper">
+  namespace="com.github.xf717.systemservice.dal.mysql.mapper.auth.BaseGroupTypeMapper">
 
   <!-- 可根据自己的需求，是否要使用 -->
-  <resultMap type="com.db.chaomaxs.systemservice.dal.mysql.dataobject.auth.BaseGroupTypeDO"
+  <resultMap type="com.github.xf717.systemservice.dal.mysql.dataobject.auth.BaseGroupTypeDO"
     id="BaseResultMap">
     <result property="id" column="id"/>
     <result property="code" column="code"/>

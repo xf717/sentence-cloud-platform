@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: sentence-gateway-xiaofeng
+  sleuth:
+    enabled: false
+    http:
+      legacy:
+        enabled: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 124.71.13.176:8848 # Nacos 服务器地址
+        namespace: dev # Nacos 命名空间
+    loadbalancer:
+      ribbon:
+        enabled: false
+  sentinel:
+    transport:
+      dashboard: localhost:8080
+logging:
+  level:
+    com.github.xf717.security.gate.v2: info
+
+server:
+  port: 8765
+
+auth:
+  serviceId: auth-service-xiaofeng
+  user:
+    token-header: Authorization
+  client:
+    id: chaomax-gateway-xiaofeng  #不填则默认读取spring.application.name
+    secret: 123456

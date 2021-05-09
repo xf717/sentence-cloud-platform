@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.db.chaomaxs.logservice.dal.mysql.mapper.sms.UserSmsCodeMapper">
+<mapper namespace="com.github.xf717.logservice.dal.mysql.mapper.sms.UserSmsCodeMapper">
 
   <!-- 可根据自己的需求，是否要使用 -->
-  <resultMap type="com.db.chaomaxs.logservice.dal.mysql.dataobject.sms.UserSmsCodeDO"
+  <resultMap type="com.github.xf717.logservice.dal.mysql.dataobject.sms.UserSmsCodeDO"
     id="BaseResultMap">
     <result property="id" column="id"/>
     <result property="mobile" column="mobile"/>

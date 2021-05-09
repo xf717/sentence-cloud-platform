@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.xf717.system.errorcode.config.ErrorCodeAutoConfiguration

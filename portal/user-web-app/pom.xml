@@ -55,7 +55,7 @@
     <dependencies>
       <dependency>
         <groupId>com.github.xf717</groupId>
-        <artifactId>chaomaxs-dependencies</artifactId>
+        <artifactId>sentence-dependencies</artifactId>
         <version>1.0-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
@@ -72,29 +72,11 @@
     </dependency>
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>position-service-api</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <scope>compile</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.github.xf717</groupId>
       <artifactId>log-service-api</artifactId>
       <version>1.0-SNAPSHOT</version>
       <scope>compile</scope>
     </dependency>
 
-    <dependency>
-      <groupId>com.github.xf717</groupId>
-      <artifactId>resource-service-api</artifactId>
-      <version>1.0-SNAPSHOT</version>
-    </dependency>
-    <!--公司服务-->
-    <dependency>
-      <groupId>com.github.xf717</groupId>
-      <artifactId>company-service-api</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <scope>compile</scope>
-    </dependency>
     <!--系统服务-->
     <dependency>
       <groupId>com.github.xf717</groupId>
@@ -179,18 +161,18 @@
     <!--用户拦截-->
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-security-user</artifactId>
+      <artifactId>sentence-spring-boot-starter-security-user</artifactId>
     </dependency>
 
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-swagger</artifactId>
+      <artifactId>sentence-spring-boot-starter-swagger</artifactId>
     </dependency>
 
     <!-- redis缓存-->
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-redis</artifactId>
+      <artifactId>sentence-spring-boot-starter-redis</artifactId>
     </dependency>
 
     <!-- 工具类相关 -->

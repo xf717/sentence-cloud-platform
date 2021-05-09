@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.db.chaomaxs.system.errorcode.config.ErrorCodeAutoConfiguration

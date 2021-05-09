@@ -25,7 +25,7 @@ swagger:
   title: 求职端
   description: 求职端应用接口
   version: 1.0.0
-  base-package: com.db.chaomaxs.userweb.controller
+  base-package: com.github.xf717.userweb.controller
 
 # 服务提供者调用
 chaomax:

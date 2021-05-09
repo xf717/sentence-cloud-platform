@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.db.chaomaxs.logservice.dal.mysql.mapper.login.UserLoginLogMapper">
+<mapper namespace="com.github.xf717.logservice.dal.mysql.mapper.login.UserLoginLogMapper">
 
   <!-- 可根据自己的需求，是否要使用 -->
-  <resultMap type="com.db.chaomaxs.logservice.dal.mysql.dataobject.login.UserLoginLogDO"
+  <resultMap type="com.github.xf717.logservice.dal.mysql.dataobject.login.UserLoginLogDO"
     id="BaseResultMap">
     <result property="id" column="id"/>
     <result property="sysAppMarketId" column="sys_app_market_id"/>

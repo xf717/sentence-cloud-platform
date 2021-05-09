@@ -8,7 +8,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 124.71.13.176:8848 # Nacos 服务器地址
+        server-addr: 127.0.0.1:8848 # Nacos 服务器地址
         namespace: dev # Nacos 命名空间
   sentinel:
     transport:
@@ -17,7 +17,7 @@ spring:
     enabled: false
   elasticsearch:
     rest:
-      uris: 39.102.79.207:9200
+      uris: 127.0.0.1:9200
 server:
   port: 8767
 

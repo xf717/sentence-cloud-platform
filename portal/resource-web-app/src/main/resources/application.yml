@@ -25,7 +25,7 @@ swagger:
   title: 资源服务
   description: 统一的资源服务
   version: 1.0.0
-  base-package: com.db.chaomaxs.resourceweb.controller
+  base-package: com.github.xf717.resourceweb.controller
 
 # 服务提供者调用
 chaomax:

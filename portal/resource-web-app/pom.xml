@@ -20,7 +20,7 @@
     <dependencies>
       <dependency>
         <groupId>com.github.xf717</groupId>
-        <artifactId>chaomaxs-dependencies</artifactId>
+        <artifactId>sentence-dependencies</artifactId>
         <version>1.0-SNAPSHOT</version>
         <type>pom</type>
         <scope>import</scope>
@@ -29,14 +29,6 @@
   </dependencyManagement>
 
   <dependencies>
-
-    <!--自身服务-->
-    <dependency>
-      <groupId>com.github.xf717</groupId>
-      <artifactId>resource-service-api</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <scope>compile</scope>
-    </dependency>
 
     <!-- Registry 和 Config 相关 -->
     <dependency>
@@ -107,17 +99,17 @@
     <!--用户拦截-->
 <!--    <dependency>-->
 <!--      <groupId>com.github.xf717</groupId>-->
-<!--      <artifactId>chaomaxs-spring-boot-starter-security-user</artifactId>-->
+<!--      <artifactId>sentence-spring-boot-starter-security-user</artifactId>-->
 <!--    </dependency>-->
     <!--swagger-->
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-swagger</artifactId>
+      <artifactId>sentence-spring-boot-starter-swagger</artifactId>
     </dependency>
     <!--OSS-->
     <dependency>
       <groupId>com.github.xf717</groupId>
-      <artifactId>chaomaxs-spring-boot-starter-oss</artifactId>
+      <artifactId>sentence-spring-boot-starter-oss</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
 

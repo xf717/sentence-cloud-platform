@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.db.chaomaxs.systemservice.dal.mysql.mapper.content.ProblemInformationMapper">
+<mapper namespace="com.github.xf717.systemservice.dal.mysql.mapper.content.ProblemInformationMapper">
 
     <!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="com.db.chaomaxs.systemservice.dal.mysql.dataobject.content.ProblemInformationDO" id="BaseResultMap">
+    <resultMap type="com.github.xf717.systemservice.dal.mysql.dataobject.content.ProblemInformationDO" id="BaseResultMap">
                     <result property="id" column="id"/>
                     <result property="title" column="title"/>
                     <result property="typeDictionaryId" column="type_dictionary_id"/>
