@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.userservice.dal.mysql.mapper.resume.UserWorkExperienceMapper">
+
+  <!-- 可根据自己的需求，是否要使用 -->
+  <resultMap type="com.db.chaomaxs.userservice.dal.mysql.dataobject.resume.UserWorkExperienceDO"
+    id="BaseResultMap">
+    <result property="id" column="id"/>
+    <result property="userResumeId" column="user_resume_id"/>
+    <result property="companyName" column="company_name"/>
+    <result property="companyId" column="company_id"/>
+    <result property="positionTypeId" column="position_type_id"/>
+    <result property="positionTypeName" column="position_type_name"/>
+    <result property="positionName" column="position_name"/>
+    <result property="industryId" column="industry_id"/>
+    <result property="industryName" column="industry_name"/>
+    <result property="content" column="content"/>
+    <result property="startJobTime" column="start_job_time"/>
+    <result property="quitJobTime" column="quit_job_time"/>
+    <result property="deleted" column="is_deleted"/>
+    <result property="createTime" column="create_time"/>
+    <result property="createBy" column="create_by"/>
+    <result property="updateTime" column="update_time"/>
+    <result property="updateBy" column="update_by"/>
+  </resultMap>
+  <select id="listWorkExperience" resultMap="BaseResultMap">
+    select id,user_resume_id,company_name,position_name,start_job_time,quit_job_time,content,position_type_id,position_type_name
+    from user_work_experience
+    where user_resume_id = #{resumeId} and is_deleted = 0
+  </select>
+  <select id="listWorkExperienceByResumeIds" resultMap="BaseResultMap">
+    select id,user_resume_id,company_name,start_job_time,quit_job_time,position_name
+    from user_work_experience
+    where is_deleted = 0 and user_resume_id in
+    <foreach collection="resumeIds" item="item" index="" open="(" separator="," close=")">
+      #{item}
+    </foreach>
+    order by quit_job_time
+  </select>
+
+</mapper>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>com.db.chaomaxs</groupId>
+    <artifactId>chaomaxs-cloud-platform</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>common</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+    <module>common-framework</module>
+    <module>chaomaxs-spring-boot</module>
+    <module>chaomaxs-spring-boot-starter-oss</module>
+    <module>chaomaxs-spring-boot-starter-swagger</module>
+    <module>chaomaxs-spring-boot-starter-sms</module>
+    <module>chaomaxs-spring-boot-starter-web</module>
+    <module>chaomaxs-security-annotations</module>
+    <module>chaomaxs-spring-boot-starter-security-admin</module>
+    <module>chaomaxs-spring-boot-starter-security-user</module>
+    <module>chaomaxs-spring-boot-starter-sentry</module>
+    <module>chaomaxs-spring-boot-starter-mybatis</module>
+    <module>chaomaxs-spring-boot-starter-system-error-code</module>
+    <module>chaomaxs-spring-boot-starter-rocketmq</module>
+    <module>chaomaxs-spring-boot-starter-xxl-job</module>
+    <module>chaomaxs-spring-boot-starter-redis</module>
+    <module>chaomaxs-spring-boot-starter-im</module>
+    <module>chaomaxs-spring-boot-starter-hystrix</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.db.chaomaxs</groupId>
+        <artifactId>chaomaxs-dependencies</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+</project>

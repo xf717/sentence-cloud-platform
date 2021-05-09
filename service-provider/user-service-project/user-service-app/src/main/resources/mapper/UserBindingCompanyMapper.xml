@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.userservice.dal.mysql.mapper.user.UserBindingCompanyMapper">
+
+  <!-- 可根据自己的需求，是否要使用 -->
+  <resultMap type="com.db.chaomaxs.userservice.dal.mysql.dataobject.user.UserBindingCompanyDO"
+    id="BaseResultMap">
+    <result property="id" column="id"/>
+    <result property="userId" column="user_id"/>
+    <result property="manager" column="is_manager"/>
+    <result property="companyId" column="company_id"/>
+    <result property="binding" column="is_binding"/>
+    <result property="deleted" column="is_deleted"/>
+    <result property="createTime" column="create_time"/>
+    <result property="createBy" column="create_by"/>
+    <result property="updateTime" column="update_time"/>
+    <result property="updateBy" column="update_by"/>
+  </resultMap>
+</mapper>

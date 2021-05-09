@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.userservice.dal.mysql.mapper.resume.UserWorkSkillTagMapper">
+
+  <!-- 可根据自己的需求，是否要使用 -->
+  <resultMap type="com.db.chaomaxs.userservice.dal.mysql.dataobject.resume.UserWorkSkillTagDO"
+    id="BaseResultMap">
+    <result property="id" column="id"/>
+    <result property="workExperienceId" column="work_experience_id"/>
+    <result property="skillTag" column="skill_tag"/>
+    <result property="deleted" column="is_deleted"/>
+    <result property="createTime" column="create_time"/>
+    <result property="createBy" column="create_by"/>
+    <result property="updateTime" column="update_time"/>
+    <result property="updateBy" column="update_by"/>
+  </resultMap>
+
+  <select id="listByWorkExperienceIds" resultMap="BaseResultMap">
+    select work_experience_id,skill_tag
+    from user_work_skill_tag
+    where  is_deleted =0 and work_experience_id in
+     <foreach item="item" collection="ids" separator="," open="(" close=")" index="">
+      #{item}
+     </foreach>
+  </select>
+
+  <select id="listByWorkExperienceId" resultMap="BaseResultMap">
+    select work_experience_id,skill_tag
+    from user_work_skill_tag
+    where  work_experience_id = #{id} and is_deleted = 0
+  </select>
+
+  <insert id="batchInsert">
+    insert into user_work_skill_tag(work_experience_id,skill_tag) values
+    <foreach collection="tagList" separator="," item="item" index="">
+      (
+        #{item.workExperienceId},
+        #{item.skillTag}
+      )
+    </foreach>
+  </insert>
+</mapper>

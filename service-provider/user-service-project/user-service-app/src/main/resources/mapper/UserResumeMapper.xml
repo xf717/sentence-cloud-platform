@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.userservice.dal.mysql.mapper.resume.UserResumeMapper">
+
+  <!-- 可根据自己的需求，是否要使用 -->
+  <resultMap type="com.db.chaomaxs.userservice.dal.mysql.dataobject.resume.UserResumeDO"
+    id="BaseResultMap">
+    <result property="id" column="id"/>
+    <result property="userId" column="user_id"/>
+    <result property="birthdayYear" column="birthday_year"/>
+    <result property="birthdayMonth" column="birthday_month"/>
+    <result property="birthdayDay" column="birthday_day"/>
+    <result property="participateJob" column="participate_job"/>
+    <result property="workYearTotal" column="work_year_total"/>
+    <result property="evaluate" column="evaluate"/>
+    <result property="positionWantedDictionaryId" column="position_wanted_dictionary_id"/>
+    <result property="positionWantedStatusName" column="position_wanted_status_name"/>
+    <result property="isOpen" column="is_open"/>
+    <result property="companyId" column="company_id"/>
+    <result property="deleted" column="is_deleted"/>
+    <result property="createTime" column="create_time"/>
+    <result property="createBy" column="create_by"/>
+    <result property="updateTime" column="update_time"/>
+    <result property="updateBy" column="update_by"/>
+  </resultMap>
+  <select id="selectByUserId" resultMap="BaseResultMap">
+        select id,evaluate,work_year_total,birthday_year,birthday_month,birthday_day,participate_job,position_wanted_status_name,position_wanted_dictionary_id
+        from user_resume
+        where user_id = #{userId}
+  </select>
+  <select id="selectByUserIds" resultMap="BaseResultMap">
+    select id,user_id,evaluate,work_year_total,birthday_year,birthday_month,birthday_day,participate_job
+    from user_resume
+    where user_id in
+    <foreach item="item" collection="userIds" separator="," open="(" close=")" index="">
+      #{item}
+    </foreach>
+  </select>
+
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.systemservice.dal.mysql.mapper.content.ReleasePlatformMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.db.chaomaxs.systemservice.dal.mysql.dataobject.content.ReleasePlatformDO" id="BaseResultMap">
+                    <result property="id" column="id"/>
+                    <result property="releasePlatformType" column="release_platform_type"/>
+                    <result property="infoId" column="info_id"/>
+                    <result property="type" column="type"/>
+                    <result property="isDeleted" column="is_deleted"/>
+                    <result property="createTime" column="create_time"/>
+                    <result property="createBy" column="create_by"/>
+                    <result property="updateTime" column="update_time"/>
+                    <result property="updateBy" column="update_by"/>
+            </resultMap>
+</mapper>

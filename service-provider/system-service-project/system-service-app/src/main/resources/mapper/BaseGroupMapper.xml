@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.systemservice.dal.mysql.mapper.auth.BaseGroupMapper">
+
+  <!-- 可根据自己的需求，是否要使用 -->
+  <resultMap type="com.db.chaomaxs.systemservice.dal.mysql.dataobject.auth.BaseGroupDO"
+    id="BaseResultMap">
+    <result property="id" column="id"/>
+    <result property="code" column="code"/>
+    <result property="name" column="name"/>
+    <result property="parentId" column="parent_id"/>
+    <result property="path" column="path"/>
+    <result property="type" column="type"/>
+    <result property="groupType" column="group_type"/>
+    <result property="description" column="description"/>
+    <result property="crtHost" column="crt_host"/>
+    <result property="isDeleted" column="is_deleted"/>
+    <result property="createTime" column="create_time"/>
+    <result property="createBy" column="create_by"/>
+    <result property="updateTime" column="update_time"/>
+    <result property="updateBy" column="update_by"/>
+  </resultMap>
+</mapper>

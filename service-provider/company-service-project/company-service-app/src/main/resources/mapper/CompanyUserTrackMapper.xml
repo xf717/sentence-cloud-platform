@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.companyservice.dal.mysql.mapper.track.CompanyUserTrackMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.db.chaomaxs.companyservice.dal.mysql.dataobject.track.CompanyUserTrackDO" id="BaseResultMap">
+        <result property="id" column="id"/>
+        <result property="companyUserId" column="company_user_id"/>
+        <result property="positionId" column="position_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="isDeleted" column="is_deleted"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+    <select id="getByUserIdAndCompanyUserId" resultMap="BaseResultMap">
+         SELECT id,user_id from company_user_track where user_id=#{userId} and company_user_id=#{companyUserId} and position_id =#{positionId} and is_deleted=0
+    </select>
+
+    <update id="updateById">
+         update company_user_track set update_time=now() where id=#{id} and is_deleted=0
+    </update>
+
+
+
+</mapper>

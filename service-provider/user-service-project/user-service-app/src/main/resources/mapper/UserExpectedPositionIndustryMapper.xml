@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+  namespace="com.db.chaomaxs.userservice.dal.mysql.mapper.resume.UserExpectedPositionIndustryMapper">
+
+  <!-- 可根据自己的需求，是否要使用 -->
+  <resultMap
+    type="com.db.chaomaxs.userservice.dal.mysql.dataobject.resume.UserExpectedPositionIndustryDO"
+    id="BaseResultMap">
+    <result property="id" column="id"/>
+    <result property="expectedPositionId" column="expected_position_id"/>
+    <result property="industryId" column="industry_id"/>
+    <result property="industryName" column="industry_name"/>
+    <result property="deleted" column="is_deleted"/>
+    <result property="createTime" column="create_time"/>
+    <result property="createBy" column="create_by"/>
+    <result property="updateTime" column="update_time"/>
+    <result property="updateBy" column="update_by"/>
+  </resultMap>
+
+  <insert id="batchInsert">
+    insert into user_expected_position_industry(expected_position_id,industry_id,industry_name) values
+    <foreach collection="industryList" separator="," item="item" index="">
+      (
+      #{item.expectedPositionId},
+      #{item.industryId},
+      #{item.industryName}
+      )
+    </foreach>
+  </insert>
+
+  <delete id="deleteByExpectedPositionId">
+    delete from user_expected_position_industry where expected_position_id = #{expectedPositionId}
+  </delete>
+
+  <select id="listIndustryByExpectedPositionId" resultMap="BaseResultMap">
+    select expected_position_id,industry_id,industry_name
+    from user_expected_position_industry
+    where expected_position_id = #{expectedPositionId}
+  </select>
+</mapper>

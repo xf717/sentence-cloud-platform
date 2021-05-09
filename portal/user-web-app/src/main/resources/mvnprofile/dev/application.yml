@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: user-web-app
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 124.71.13.176:8848 # Nacos 服务器地址
+        namespace: dev # Nacos 命名空间
+  sentinel:
+    transport:
+      dashboard: localhost:8080
+  sleuth:
+    enabled: false
+
+server:
+  port: 38085
+
+# 配置swagger
+# Swagger 配置项
+swagger:
+  title: 求职端
+  description: 求职端应用接口
+  version: 1.0.0
+  base-package: com.db.chaomaxs.userweb.controller
+
+# 服务提供者调用
+chaomax:
+  user:
+    serviceId: user-service
+  position:
+    serviceId: position-service
+  log:
+    serviceId: log-service
+  resource:
+    serviceId: resource-service
+  company:
+    serviceId: company-service
+  system:
+    serviceId: system-service
+#鉴权相关
+auth:
+  serviceId: auth-service
+  user:
+    token-header: Authorization
+  client:
+    id: user-web-app  #不填则默认读取spring.application.name
+    secret: 123456

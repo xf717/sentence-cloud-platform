@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.userservice.dal.mysql.mapper.resume.UserProfessionalSkillMapper">
+
+  <!-- 可根据自己的需求，是否要使用 -->
+  <resultMap type="com.db.chaomaxs.userservice.dal.mysql.dataobject.resume.UserProfessionalSkillDO"
+    id="BaseResultMap">
+    <result property="id" column="id"/>
+    <result property="userResumeId" column="user_resume_id"/>
+    <result property="skillName" column="skill_name"/>
+    <result property="durationNum" column="duration_num"/>
+    <result property="masteryDictionaryId" column="mastery_dictionary_id"/>
+    <result property="companyId" column="company_id"/>
+    <result property="deleted" column="is_deleted"/>
+    <result property="createTime" column="create_time"/>
+    <result property="createBy" column="create_by"/>
+    <result property="updateTime" column="update_time"/>
+    <result property="updateBy" column="update_by"/>
+  </resultMap>
+  <select id="listProfessionalSkill" resultMap="BaseResultMap">
+    select  id,user_resume_id,skill_name,duration_num,mastery_dictionary_id
+    from user_professional_skill
+    where user_resume_id = #{resumeId} and is_deleted = 0
+  </select>
+</mapper>

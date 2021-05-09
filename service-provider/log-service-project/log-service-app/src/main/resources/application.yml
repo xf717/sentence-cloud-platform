@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: log-service-xiaofeng
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 124.71.13.176:8848 # Nacos 服务器地址
+        namespace: dev # Nacos 命名空间
+  sentinel:
+    transport:
+      dashboard: localhost:8080
+  sleuth:
+    enabled: false
+
+server:
+  port: 8764

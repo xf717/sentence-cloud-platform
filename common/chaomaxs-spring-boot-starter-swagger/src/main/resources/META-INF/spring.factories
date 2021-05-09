@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.db.chaomaxs.swagger.config.SwaggerAutoConfiguration

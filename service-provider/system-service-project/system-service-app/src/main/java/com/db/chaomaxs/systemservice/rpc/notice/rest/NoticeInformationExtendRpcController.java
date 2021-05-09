@@ -1,0 +1,60 @@
+package com.db.chaomaxs.systemservice.rpc.notice.rest;
+
+import com.db.chaomaxs.common.framework.msg.BaseResponse;
+import com.db.chaomaxs.common.framework.msg.ObjectRestResponse;
+import com.db.chaomaxs.common.framework.msg.TableResultResponse;
+import com.db.chaomaxs.systemservice.rpc.notice.NoticeInformationExtendRpcImpl;
+import com.db.chaomaxs.systemservice.rpc.notice.facade.api.NoticeInformationExtendApi;
+import com.db.chaomaxs.systemservice.rpc.notice.dto.NoticeInformationExtendCreateReqDTO;
+import com.db.chaomaxs.systemservice.rpc.notice.dto.NoticeInformationExtendRespDTO;
+import com.db.chaomaxs.systemservice.rpc.notice.dto.NoticeInformationExtendUpdateReqDTO;
+import com.db.chaomaxs.systemservice.rpc.notice.dto.NoticeInformationExtendListQueryReqDTO;
+import com.db.chaomaxs.systemservice.rpc.notice.dto.NoticeInformationExtendPageReqDTO;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * 内容管理通知信息_扩展信息表
+ *
+ * @author xiaofeng
+ * @date 2021-03-29 18:09:32
+ */
+@RestController
+public class NoticeInformationExtendRpcController implements NoticeInformationExtendApi {
+
+	@Autowired
+	private NoticeInformationExtendRpcImpl noticeInformationExtendRpc;
+
+	@Override
+	public BaseResponse save(@RequestBody NoticeInformationExtendCreateReqDTO createReqDTO) {
+		return noticeInformationExtendRpc.save(createReqDTO);
+	}
+
+	@Override
+	public BaseResponse update(@RequestBody NoticeInformationExtendUpdateReqDTO updateReqDTO) {
+		return noticeInformationExtendRpc.update(updateReqDTO);
+	}
+
+	@Override
+	public BaseResponse remove(@PathVariable("id") Long id) {
+		return noticeInformationExtendRpc.remove(id);
+	}
+
+	@Override
+	public ObjectRestResponse<NoticeInformationExtendRespDTO> getNoticeInformationExtendById(@PathVariable("id") Long id) {
+		return noticeInformationExtendRpc.getNoticeInformationExtendById(id);
+	}
+
+	@Override
+	public ObjectRestResponse<List<NoticeInformationExtendRespDTO>> listNoticeInformationExtends(@RequestBody NoticeInformationExtendListQueryReqDTO listQuery) {
+		return noticeInformationExtendRpc.listNoticeInformationExtends(listQuery);
+	}
+
+	@Override
+	public TableResultResponse<NoticeInformationExtendRespDTO> page(@RequestBody NoticeInformationExtendPageReqDTO pageReqDTO) {
+		return noticeInformationExtendRpc.page(pageReqDTO);
+	}
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.userservice.dal.mysql.mapper.resume.UserEduExperienceMapper">
+
+  <!-- 可根据自己的需求，是否要使用 -->
+  <resultMap type="com.db.chaomaxs.userservice.dal.mysql.dataobject.resume.UserEduExperienceDO"
+    id="BaseResultMap">
+    <result property="id" column="id"/>
+    <result property="userResumeId" column="user_resume_id"/>
+    <result property="schoolId" column="school_id"/>
+    <result property="schoolName" column="school_name"/>
+    <result property="educationDictionaryId" column="education_dictionary_id"/>
+    <result property="education" column="education"/>
+    <result property="specialityId" column="speciality_id"/>
+    <result property="specialityName" column="speciality_name"/>
+    <result property="startTime" column="start_time"/>
+    <result property="endTime" column="end_time"/>
+    <result property="companyId" column="company_id"/>
+    <result property="deleted" column="is_deleted"/>
+    <result property="createTime" column="create_time"/>
+    <result property="createBy" column="create_by"/>
+    <result property="updateTime" column="update_time"/>
+    <result property="updateBy" column="update_by"/>
+  </resultMap>
+  <select id="listEduExperience" resultMap="BaseResultMap">
+    select id,user_resume_id,school_id,school_name,education_dictionary_id,education,speciality_id,speciality_name,start_time,end_time
+    from user_edu_experience
+    where user_resume_id = #{resumeId} and is_deleted = 0
+  </select>
+
+  <select id="selectEducation" resultType="String">
+    SELECT education from user_edu_experience where user_resume_id=#{resumeId} and is_deleted=0  ORDER BY end_time LIMIT 1
+  </select>
+
+  <select id="selectEduExperience" resultMap="BaseResultMap">
+    select id,user_resume_id,school_id,school_name,education_dictionary_id,education,speciality_id,speciality_name,start_time,end_time
+    from user_edu_experience
+    where user_resume_id = #{resumeId} and is_deleted = 0
+  </select>
+
+  <select id="listEduExperienceByResumeIds" resultMap="BaseResultMap">
+    SELECT  t1.user_resume_id,t1.education_dictionary_id,t1.id
+    FROM(
+        SELECT max(end_time) AS end_time
+        FROM user_edu_experience
+        WHERE is_deleted = 0 AND user_resume_id IN
+        <foreach index="" collection="resumeIds" separator="," open="(" close=")" item="item">
+            #{item}
+        </foreach>
+        GROUP BY user_resume_id
+    ) t0  LEFT JOIN user_edu_experience t1 ON t0.end_time = t1.end_time
+
+  </select>
+
+</mapper>

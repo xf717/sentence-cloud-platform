@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.userservice.dal.mysql.mapper.user.UserInfoMapper">
+
+  <!-- 可根据自己的需求，是否要使用 -->
+  <resultMap type="com.db.chaomaxs.userservice.dal.mysql.dataobject.user.UserInfoDO" id="BaseResultMap">
+    <result property="id" column="id"/>
+    <result property="nickname" column="nickname"/>
+    <result property="password" column="password"/>
+    <result property="mobile" column="mobile"/>
+    <result property="signature" column="signature"/>
+    <result property="avatarUrl" column="avatar_url"/>
+    <result property="userStatus" column="user_status"/>
+    <result property="userType" column="user_type"/>
+    <result property="companyId" column="company_id"/>
+    <result property="deleted" column="is_deleted"/>
+    <result property="createTime" column="create_time"/>
+    <result property="createBy" column="create_by"/>
+    <result property="updateTime" column="update_time"/>
+    <result property="updateBy" column="update_by"/>
+  </resultMap>
+
+
+
+  <!-- 可根据自己的需求，是否要使用 -->
+  <resultMap type="com.db.chaomaxs.userservice.dal.mysql.dataobject.user.UserPersonalInfoDO" id="PersonalResultMap">
+    <result property="id" column="id"/>
+    <result property="weixin" column="weixin"/>
+    <result property="avatarUrl" column="avatar_url"/>
+    <result property="mobile" column="mobile"/>
+    <result property="gender" column="gender"/>
+    <result property="realName" column="real_name"/>
+    <result property="identityType" column="identity_type"/>
+    <result property="birthdayYear" column="birthday_year"/>
+    <result property="birthdayMonth" column="birthday_month"/>
+    <result property="birthdayDay" column="birthday_day"/>
+    <result property="participateJob" column="participate_job"/>
+    <result property="completeResume" column="is_complete_resume"/>
+  </resultMap>
+
+
+  <select id="selectUserInfoByUserId" resultMap="BaseResultMap">
+    select id, avatar_url,mobile from user_info where id = #{userId} and is_deleted = 0
+  </select>
+  <select id="listUserInfoByUserIds" resultMap="BaseResultMap">
+    select id ,avatar_url,mobile
+    from user_info
+    where id in
+    <foreach item="item" collection="userIds" separator="," open="(" close=")" index="">
+      #{item}
+    </foreach>
+  </select>
+  <select id="getUserInfoById" resultMap="PersonalResultMap">
+    select ui.id,ui.avatar_url,ui.mobile,ue.weixin,ue.real_name,ue.gender,ue.identity_type,ur.birthday_year,ur.birthday_month,ur.birthday_day,ur.participate_job,ue.is_complete_resume
+    from user_info ui
+    inner join user_extend ue on ui.id = ue.user_id
+    inner join user_resume ur on ue.user_id = ur.user_id
+    where ui.id = #{userId}
+  </select>
+
+  <select id="listUserPersonalInfo" resultMap="PersonalResultMap">
+    select ui.id,ui.avatar_url,ue.real_name
+    from user_info ui
+    inner join user_extend ue on ui.id = ue.user_id
+    where ui.id in
+    <foreach item="item" collection="userIds" separator="," open="(" close=")" index="">
+      #{item}
+    </foreach>
+  </select>
+</mapper>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+  namespace="com.db.chaomaxs.positionservice.dal.mysql.mapper.positiontype.PositionTypeMapper">
+
+  <!-- 可根据自己的需求，是否要使用 -->
+  <resultMap type="com.db.chaomaxs.positionservice.dal.mysql.dataobject.positiontype.PositionTypeDO"
+    id="BaseResultMap">
+    <result property="id" column="id"/>
+    <result property="typeName" column="type_name"/>
+    <result property="code" column="code"/>
+    <result property="level" column="level"/>
+    <result property="parentId" column="parent_id"/>
+    <result property="displayStatus" column="display_status"/>
+    <result property="sortOrder" column="sort_order"/>
+    <result property="isDeleted" column="is_deleted"/>
+    <result property="createTime" column="create_time"/>
+    <result property="createBy" column="create_by"/>
+    <result property="updateTime" column="update_time"/>
+    <result property="updateBy" column="update_by"/>
+  </resultMap>
+
+  <update id="batchUpdate" parameterType="java.util.List">
+    REPLACE INTO position_type (id,type_name,code,`level`,parent_id,display_status) values
+    <foreach collection="list" item="item" index="index" separator=",">
+      (
+      #{item.id},#{item.typeName},#{item.code},#{item.level},#{item.parentId},#{item.displayStatus}
+      )
+    </foreach>
+  </update>
+
+
+  <select id="getById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select id,type_name,code,`level`,parent_id,display_status,sort_order,is_deleted,create_time,create_by,update_time,update_by from position_type where id = #{id}
+  </select>
+</mapper>

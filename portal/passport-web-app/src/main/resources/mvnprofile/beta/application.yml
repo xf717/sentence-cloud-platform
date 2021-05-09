@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: passport-web-app-xiaofeng
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    default-property-inclusion: non_null
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 124.71.13.176:8848 # Nacos 服务器地址
+        namespace: beta # Nacos 命名空间
+  sentinel:
+    transport:
+      dashboard: localhost:8080
+  sleuth:
+    enabled: false
+
+server:
+  port: 38085
+
+# 配置swagger
+# Swagger 配置项
+swagger:
+  title: 登录
+  description: 求职端、企业端登录接口
+  version: 1.0.0
+  base-package: com.db.chaomaxs.passportweb.controller
+
+# 服务提供者调用
+chaomax:
+  user:
+    serviceId: user-service
+  log:
+    serviceId: log-service
+#鉴权相关
+auth:
+  serviceId: auth-service
+  user:
+    token-header: Authorization
+  client:
+    id: passport-web-app  #不填则默认读取spring.application.name
+    secret: 123456
+
+# 自定义Jwt认证服务
+jwt:
+  token-header: Authorization
+  expire: 14400
+  rsa-secret: xx1WET12^%3^(WE45
+
+wx:
+  mp:
+    app-id: wx3ee39993dd185c24 #目前测试帐号,正式等上线后在进行更换
+    secret: e4dea0bebcd1e28a74701768a2ff74c7 #目前测试帐号,正式等上线后在进行更换
+    token: chaomaxs
+    aes-key: xxx
+    redirect-uri: http://localhost:8080   #自定义业务重定向地址

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: auth-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 124.71.13.176:8848
+        namespace: dev
+        file-extension: yaml
+  profiles:
+    active: dev
+
+  main:
+    allow-bean-definition-overriding: true

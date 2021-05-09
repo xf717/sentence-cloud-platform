@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.userservice.dal.mysql.mapper.user.UserWordMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.db.chaomaxs.userservice.dal.mysql.dataobject.user.UserWordDO" id="BaseResultMap">
+        <result property="id" column="id"/>
+        <result property="content" column="content"/>
+        <result property="userId" column="user_id"/>
+        <result property="sort" column="sort"/>
+        <result property="isDeleted" column="is_deleted"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+    <select id="selectMaxSortByUserId" resultType="java.lang.Integer" parameterType="java.lang.Long">
+        select  max(sort) from user_word where  user_id=#{userId}
+    </select>
+    <select id="getById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select  id,content,sort from user_word where  id=#{id} order by sort
+    </select>
+</mapper>

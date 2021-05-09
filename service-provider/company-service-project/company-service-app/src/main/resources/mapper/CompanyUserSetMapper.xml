@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.db.chaomaxs.companyservice.dal.mysql.mapper.settings.CompanyUserSetMapper">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.db.chaomaxs.companyservice.dal.mysql.dataobject.settings.CompanyUserSetDO" id="BaseResultMap">
+        <result property="id" column="id"/>
+        <result property="companyUserId" column="company_user_id"/>
+        <result property="companyId" column="company_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="blackSwitch" column="black_switch"/>
+        <result property="topSwitch" column="top_switch"/>
+        <result property="isDeleted" column="is_deleted"/>
+        <result property="createBy" column="create_by"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateBy" column="update_by"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+    <select id="getUserSetByCompanyUserIdAndUserId" resultMap="BaseResultMap">
+         SELECT id,black_switch,top_switch from company_user_set where user_id=#{userId} and company_user_id=#{companyUserId}  and company_id=#{companyId} and is_deleted=0
+    </select>
+</mapper>
