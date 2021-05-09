@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.db.chaomaxs</groupId>
+    <groupId>com.github.xf717</groupId>
     <artifactId>chaomaxs-auth</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
@@ -31,7 +31,7 @@
 
     <!-- 通用相关 -->
     <dependency>
-      <groupId>com.db.chaomaxs</groupId>
+      <groupId>com.github.xf717</groupId>
       <artifactId>common-framework</artifactId>
     </dependency>
 

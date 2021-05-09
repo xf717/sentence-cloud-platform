@@ -4,16 +4,16 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.db.chaomaxs</groupId>
-    <artifactId>chaomaxs-cloud-platform</artifactId>
+    <artifactId>sentence-cloud-platform</artifactId>
+    <groupId>com.github.xf717</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>chaomaxs-dependencies</artifactId>
+  <artifactId>sentence-dependencies</artifactId>
 
   <packaging>pom</packaging>
   <name>${project.artifactId}</name>
-  <description>Maven Bom，定义 Chaomaxs 项目的所有依赖的版本</description>
+  <description>Maven Bom，定义 Sentence 项目的所有依赖的版本</description>
 
   <!-- 属性 -->
   <properties>
@@ -93,7 +93,7 @@
 
       <!-- 通用相关 -->
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>common-framework</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
@@ -152,19 +152,19 @@
       </dependency>
 
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-mybatis</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-redis</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
 
       <!--jwt 创建token-->
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-jwt</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
@@ -179,14 +179,14 @@
       </dependency>
 
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-web</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
 
       <!-- 统一鉴权-->
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-auth-client</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
@@ -208,50 +208,50 @@
       </dependency>
 
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-swagger</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
 
       <!--熔断 异常处理-->
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-hystrix</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
 
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-security-annotations</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-security-user</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-security-admin</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
 
       <dependency> <!-- TODO 需要思考下，归类到哪里 -->
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-system-error-code</artifactId> <!-- 错误码 -->
         <version>1.0-SNAPSHOT</version>
       </dependency>
 
       <!--OSS-->
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-oss</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
 
       <!--短信-->
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-sms</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
@@ -264,7 +264,7 @@
       </dependency>
 
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-rocketmq</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
@@ -277,7 +277,7 @@
       </dependency>
 
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-spring-boot-starter-xxl-job</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>

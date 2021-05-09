@@ -3,7 +3,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <groupId>com.db.chaomaxs</groupId>
+    <groupId>com.github.xf717</groupId>
     <artifactId>common</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
@@ -21,13 +21,13 @@
 
     <!-- Web 相关 -->
     <dependency>
-      <groupId>com.db.chaomaxs</groupId>
+      <groupId>com.github.xf717</groupId>
       <artifactId>chaomaxs-spring-boot-starter-web</artifactId>
     </dependency>
 
     <!--用户、服务鉴权-->
     <dependency>
-      <groupId>com.db.chaomaxs</groupId>
+      <groupId>com.github.xf717</groupId>
       <artifactId>chaomaxs-auth-client</artifactId>
     </dependency>
 

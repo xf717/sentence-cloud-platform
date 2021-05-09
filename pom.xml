@@ -11,8 +11,8 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
-  <groupId>com.db.chaomaxs</groupId>
-  <artifactId>chaomaxs-cloud-platform</artifactId>
+  <groupId>com.github.xf717</groupId>
+  <artifactId>sentence-cloud-platform</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <packaging>pom</packaging>

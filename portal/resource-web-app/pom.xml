@@ -5,7 +5,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <parent>
-    <groupId>com.db.chaomaxs</groupId>
+    <groupId>com.github.xf717</groupId>
     <artifactId>portal</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
@@ -19,7 +19,7 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.db.chaomaxs</groupId>
+        <groupId>com.github.xf717</groupId>
         <artifactId>chaomaxs-dependencies</artifactId>
         <version>1.0-SNAPSHOT</version>
         <type>pom</type>
@@ -32,7 +32,7 @@
 
     <!--自身服务-->
     <dependency>
-      <groupId>com.db.chaomaxs</groupId>
+      <groupId>com.github.xf717</groupId>
       <artifactId>resource-service-api</artifactId>
       <version>1.0-SNAPSHOT</version>
       <scope>compile</scope>
@@ -106,23 +106,23 @@
 
     <!--用户拦截-->
 <!--    <dependency>-->
-<!--      <groupId>com.db.chaomaxs</groupId>-->
+<!--      <groupId>com.github.xf717</groupId>-->
 <!--      <artifactId>chaomaxs-spring-boot-starter-security-user</artifactId>-->
 <!--    </dependency>-->
     <!--swagger-->
     <dependency>
-      <groupId>com.db.chaomaxs</groupId>
+      <groupId>com.github.xf717</groupId>
       <artifactId>chaomaxs-spring-boot-starter-swagger</artifactId>
     </dependency>
     <!--OSS-->
     <dependency>
-      <groupId>com.db.chaomaxs</groupId>
+      <groupId>com.github.xf717</groupId>
       <artifactId>chaomaxs-spring-boot-starter-oss</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
 
     <dependency>
-      <groupId>com.db.chaomaxs</groupId>
+      <groupId>com.github.xf717</groupId>
       <artifactId>common-framework</artifactId>
     </dependency>
   </dependencies>
