@@ -3,7 +3,6 @@ package com.github.xf717.userservice.convert.user;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.github.xf717.common.framework.vo.PageResult;
 import com.github.xf717.userservice.dal.mysql.dataobject.user.UserInfoDO;
-import com.github.xf717.userservice.dal.mysql.dataobject.user.UserPersonalInfoDO;
 import com.github.xf717.userservice.rpc.user.dto.UserInfoCreateReqDTO;
 import com.github.xf717.userservice.rpc.user.dto.UserInfoRespDTO;
 import com.github.xf717.userservice.rpc.user.dto.UserInfoUpdateReqDTO;

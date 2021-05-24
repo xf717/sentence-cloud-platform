@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.github.xf717.mybatis.core.query.QueryWrapperX;
 import com.github.xf717.userservice.dal.mysql.dataobject.user.UserInfoDO;
-import com.github.xf717.userservice.dal.mysql.dataobject.user.UserPersonalInfoDO;
 import com.github.xf717.userservice.rpc.user.dto.UserInfoListQueryReqDTO;
 import com.github.xf717.userservice.rpc.user.dto.UserInfoPageReqDTO;
 import java.util.List;
@@ -92,18 +91,5 @@ public interface UserInfoMapper extends BaseMapper<UserInfoDO> {
    * @return
    */
   List<UserInfoDO> listUserInfoByUserIds(@Param("userIds") Set<Long> userIds);
-
-  /**
-   * 根据用户id 查询用户信息和拓展信息
-   * @param userId
-   * @return
-   */
-  UserPersonalInfoDO getUserInfoById(@Param("userId") Long userId);
-
-  /**
-   * 根据用户ids 查询用户信息和拓展信息
-   * @param userIds
-   * @return
-   */
-  List<UserPersonalInfoDO> listUserPersonalInfo(@Param("userIds") Set<Long> userIds);
+  
 }

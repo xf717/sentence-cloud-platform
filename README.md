@@ -8,7 +8,7 @@
 
 前端框架：VUE全家桶 
 
-后端技术：springcloud、redis、分布式、MQ、elk、主从读写分离、xxljob、mybatispuls等框架技术
+后端技术：springcloud、redis、ES、MQ、elk、主从读写分离、xxljob、mybatispuls等框架技术
 
 
 #### 安装教程
@@ -29,13 +29,18 @@
 2.  新建 Feat_xxx 分支
 3.  提交代码
 4.  新建 Pull Request
+5.  联系方式：
 
+#### 开发进度
 
-#### 特技
+| 阶段                   | 人员     | 时间                    |
+| ---------------------- | -------- | ----------------------- |
+| 一、需求分析           | xiaofeng | 20210511-20210516       |
+| 二、概述设计           | xiaofeng | 20210517-20210519       |
+| 三、详细设计           | xiaofeng | 20210520-20210523       |
+| 四、详细设计评审       | xiaofeng | 20210524-20210524       |
+| 五、项目初始化         | xiaofeng | 20210509-20210509(完成) |
+| 六、功能需求开发       | xiaofeng | 20210525-20210614       |
+| 七、单元测试、冒烟测试 | xiaofeng | 20210615-20210624       |
+| 八、接口对接           | 待定     |                         |
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)

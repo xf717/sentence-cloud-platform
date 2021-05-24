@@ -9,13 +9,12 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>sentence-spring-boot-starter-im</artifactId>
+  <artifactId>sentence-spring-boot-starter-idempotent</artifactId>
   <version>1.0-SNAPSHOT</version>
   <dependencies>
     <dependency>
-      <groupId>cn.rongcloud.im</groupId>
-      <artifactId>server-sdk-java</artifactId>
-      <version>3.2.5</version>
+      <groupId>com.github.xf717</groupId>
+      <artifactId>sentence-spring-boot-starter-redis</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>

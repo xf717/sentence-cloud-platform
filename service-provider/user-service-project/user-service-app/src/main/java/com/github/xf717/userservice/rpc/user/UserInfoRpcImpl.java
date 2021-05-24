@@ -25,43 +25,37 @@ import org.springframework.stereotype.Service;
  */
 @Slf4j
 @Service
-public class UserInfoRpcImpl implements UserInfoRpcFacade {
+public class UserInfoRpcImpl {
 
   @Autowired
   private UserInfoManager userInfoManager;
 
-  @Override
   public BaseResponse save(UserInfoCreateReqDTO createReqDTO) {
     // 如果需要返回值,请更改 BaseResponse 为ObjectResponse
     userInfoManager.saveUserInfo(createReqDTO);
     return BaseResponse.success("保存成功");
   }
 
-  @Override
   public ObjectRestResponse<UserInfoRespDTO> createUserIfAbsent(UserInfoCreateReqDTO createReqDTO) {
     return ObjectRestResponse.success(userInfoManager.createUserIfAbsent(createReqDTO));
   }
 
-  @Override
   public BaseResponse update(UserInfoUpdateReqDTO updateReqDTO) {
     userInfoManager.updateUserInfo(updateReqDTO);
     return BaseResponse.success("更新成功");
   }
 
-  @Override
   public BaseResponse remove(Long id) {
     userInfoManager.deleteUserInfo(id);
     return BaseResponse.success("删除成功");
   }
 
-  @Override
   public ObjectRestResponse<List<UserInfoRespDTO>> listUserInfos(
       UserInfoListQueryReqDTO listQuery) {
     List<UserInfoRespDTO> list = userInfoManager.listUserInfos(listQuery);
     return new ObjectRestResponse<>().data(list);
   }
 
-  @Override
   public TableResultResponse<UserInfoRespDTO> page(UserInfoPageReqDTO pageReqDTO) {
     PageResult<UserInfoRespDTO> pageResult = userInfoManager.pageUserInfo(pageReqDTO);
     TableResultResponse<UserInfoRespDTO> tableResultResponse = new TableResultResponse(
@@ -69,30 +63,25 @@ public class UserInfoRpcImpl implements UserInfoRpcFacade {
     return tableResultResponse;
   }
 
-  @Override
   public ObjectRestResponse<UserInfoRespDTO> verifyPassword(String username, String password) {
     return ObjectRestResponse.success(userInfoManager.verifyPassword(username, password));
   }
 
-  @Override
   public ObjectRestResponse<Boolean> setPassword(String username, String password) {
     return ObjectRestResponse.success(userInfoManager.setPassword(username, password));
   }
 
 
-  @Override
   public ObjectRestResponse<Boolean> updateMobile(String username, String mobile) {
     return ObjectRestResponse.success(userInfoManager.updateMobile(username, mobile));
   }
 
-  @Override
   public ObjectRestResponse<Boolean> updatePassword(String username, String oldPassword,
       String password) {
     return ObjectRestResponse
         .success(userInfoManager.updatePassword(username, oldPassword, password));
   }
 
-  @Override
   public ObjectRestResponse<UserPersonalInfoRespDTO> getUserInfoById(Long userId) {
     UserPersonalInfoRespDTO userPersonalInfoRespDTO = userInfoManager.getUserInfoById(userId);
     return new ObjectRestResponse<>().data(userPersonalInfoRespDTO);

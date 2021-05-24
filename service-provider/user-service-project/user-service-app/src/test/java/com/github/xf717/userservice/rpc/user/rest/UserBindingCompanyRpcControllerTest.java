@@ -1,6 +1,5 @@
 package com.github.xf717.userservice.rpc.user.rest;
 
-import com.github.xf717.userservice.dal.mysql.dataobject.user.UserRecruitExtendDO;
 import com.github.xf717.userservice.enums.user.UserBindingStateEnum;
 import com.github.xf717.userservice.rpc.user.dto.UserBindingCompanyCreateReqDTO;
 import com.github.xf717.userservice.rpc.user.dto.UserBindingTransferReqDTO;

@@ -53,6 +53,10 @@ public class PassportController {
     return ObjectRestResponse.success(passportToken);
   }
 
+  public void test(){
+    return;
+  }
+
   /**
    * 第三登录-小程序
    *

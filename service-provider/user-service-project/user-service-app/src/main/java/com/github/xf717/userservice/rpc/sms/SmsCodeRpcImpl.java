@@ -18,17 +18,15 @@ import org.springframework.stereotype.Service;
  */
 @Slf4j
 @Service
-public class SmsCodeRpcImpl implements SmsCodeRpcFacade {
+public class SmsCodeRpcImpl {
 
   @Autowired
   private UserSmsCodeManager userSmsCodeManager;
 
-  @Override
   public ObjectRestResponse<Boolean> sendSmsCode(UserSendSmsCodeReqDTO sendSmsCodeDTO) {
     return new ObjectRestResponse<>().data(userSmsCodeManager.sendSmsCode(sendSmsCodeDTO));
   }
-
-  @Override
+  
   public ObjectRestResponse<Boolean> verifySmsCode(UserVerifySmsCodeReqDTO verifySmsCodeDTO) {
     return new ObjectRestResponse<>().data(userSmsCodeManager.verifySmsCode(verifySmsCodeDTO));
   }

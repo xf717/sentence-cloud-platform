@@ -15,7 +15,6 @@ import com.github.xf717.userservice.convert.user.UserThirdConvert;
 import com.github.xf717.userservice.dal.mysql.dataobject.resume.UserResumeDO;
 import com.github.xf717.userservice.dal.mysql.dataobject.user.UserExtendDO;
 import com.github.xf717.userservice.dal.mysql.dataobject.user.UserInfoDO;
-import com.github.xf717.userservice.dal.mysql.dataobject.user.UserPersonalInfoDO;
 import com.github.xf717.userservice.dal.mysql.dataobject.user.UserThirdDO;
 import com.github.xf717.userservice.dal.mysql.mapper.resume.UserResumeMapper;
 import com.github.xf717.userservice.dal.mysql.mapper.user.UserExtendMapper;
@@ -64,6 +63,10 @@ public class UserInfoService {
 
   @Autowired
   private UserThirdMapper userThirdMapper;
+
+  /**
+   * 朋
+   */
   @Autowired
   private UserResumeMapper userResumeMapper;
 
